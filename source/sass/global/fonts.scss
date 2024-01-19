@@ -1,0 +1,21 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Manrope";
+
+  font-display: swap;
+  src:
+    url("../fonts/manrope-v15-cyrillic_latin-regular.woff2") format("woff2"),
+    url("../fonts/manrope-v15-cyrillic_latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Manrope";
+
+  font-display: swap;
+  src:
+    url("../fonts/manrope-v15-cyrillic_latin-500.woff2") format("woff2"),
+    url("../fonts/manrope-v15-cyrillic_latin-500.woff") format("woff");
+}

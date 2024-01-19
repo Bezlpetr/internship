@@ -5,12 +5,217 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Internship programs</title>
+  <meta name="description" content="&#128119;Получи незаменимый опыт работы в ведущих мировых компаниях и государственных организациях &#127942;Стань волонтером, помогай другим и развивай свои лидерские качества &#128213;Получи образование за рубежом и измени своё будущее.">
+  <title>Стажировка — международный проект для повышения квалификации молодых специалистов</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   <link rel="stylesheet" href="sass/style.scss">
+  <link rel="preload" href="./fonts/manrope-v15-cyrillic_latin-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/manrope-v15-cyrillic_latin-500.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
-  <div data-test="slider">slider</div>
+  <div class="wrapper">
+    <div class="wrapper__overlay visually-hidden" data-wrapper-overlay></div>
+      <header class="header " data-test="slider" data-header>
+        <h1 class="visually-hidden">Проект "Стажировка".</h1>
+        <div class="container header__container" data-header-sticky data-hide-point="50">
+          <a class="header__logo-link">
+            <svg width="30" height="30">
+              <use href="__spritemap#sprite-icon-logo"></use>
+            </svg>
+            <span class="visually-hidden">Логотип проекта "Стажировка".</span>
+          </a>
+          <nav class="header__navigation">
+            <button class="btn header__navigation-toggle is-passive" type="button" aria-label="Открыть меню." data-navigation-toggle>
+              <span>Меню</span>
+              <span class="btn__circle header__navigation-toggle-circle">
+              <svg width="22" height="22">
+                <use href="__spritemap#sprite-icon-burger"></use>
+              </svg>
+            </span>
+          </button>
+          <ul class="header__navigation-list" data-navigation-list>
+            <li class="header__navigation-item">
+              <a href="#" data-navigation-button>О проекте</a>
+            </li>
+            <li class="header__navigation-item header__navigation-item--submenu" data-navigation-item-with-submenu>
+              <a href="#" data-navigation-button>Программы</a>
+              <ul class="header__navigation-sublist" data-navigation-submenu>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Стажировки</a>
+                </li>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Волонтёрство</a>
+                </li>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Учёба</a>
+                </li>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Религия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__navigation-item">
+              <a href="#" data-navigation-button>Как поехать</a>
+            </li>
+            <li class="header__navigation-item">
+              <a href="#" data-navigation-button>Отзывы</a>
+            </li>
+            <li class="header__navigation-item header__navigation-item--submenu" data-navigation-item-with-submenu>
+              <a href="#" data-navigation-button>Новости</a>
+              <ul class="header__navigation-sublist" data-navigation-submenu>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Общее</a>
+                </li>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Волонтёрство</a>
+                </li>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Стажировки</a>
+                </li>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Карьера</a>
+                </li>
+                <li class="header__navigation-sublist-item">
+                  <a href="#" data-navigation-button>Путешествия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__navigation-item">
+              <a href="#" data-navigation-button>Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section class="hero" data-test="slider">
+        <h2 class="visually-hidden">Рекламная информация о деятельности проекта "Стажировка".</h2>
+        <div class="hero__slider swiper" data-hero-slider>
+          <ol class="hero__slider-list swiper-wrapper">
+            <li class="hero__slider-item swiper-slide">
+              <div class="hero__slide-image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="./img/hero-slide-training-mobile.webp 1x, ./img/hero-slide-training-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="./img/hero-slide-training-tablet.webp 1x, ./img/hero-slide-training-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/hero-slide-training-desktop.webp 1x, ./img/hero-slide-training-desktop@2x.webp 2x">
+                  <source type="image/jpeg" media="(max-width: 767px)"
+                    srcset="./img/hero-slide-training-mobile.jpg 1x, ./img/hero-slide-training-mobile@2x.jpg 2x">
+                  <source type="image/jpeg" media="(max-width: 1199px)"
+                    srcset="./img/hero-slide-training-tablet.jpg 1x, ./img/hero-slide-training-tablet@2x.jpg 2x">
+                  <img src="./img/hero-slide-training-desktop.jpg" srcset="./img/hero-slide-training-desktop@2x.jpg 2x" width="1440" height="800" alt="">
+                </picture>
+              </div>
+              <div class="hero__slide-content-wrapper">
+                <div class="hero__slide-title-wrapper">
+                  <h3>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h3>
+                </div>
+                <div class="hero__slide-second-row-wrapper">
+                  <div class="hero__slide-text-wrapper">
+                    <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  </div>
+                  <div class="hero__slide-button-wrapper">
+                    <a class="btn hero__slide-button" href="#">
+                      <span>Подробнее</span>
+                      <span class="btn__circle hero__slide-button-circle">
+                        <svg width="22" height="22">
+                          <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="hero__slider-item swiper-slide">
+              <div class="hero__slide-image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="./img/hero-slide-volunteering-mobile.webp 1x, ./img/hero-slide-volunteering-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="./img/hero-slide-volunteering-tablet.webp 1x, ./img/hero-slide-volunteering-tablet@2x.webp 2x">
+                    <source type="image/webp"
+                    srcset="./img/hero-slide-volunteering-desktop.webp 1x, ./img/hero-slide-volunteering-desktop@2x.webp 2x">
+                  <source type="image/jpeg" media="(max-width: 767px)"
+                    srcset="./img/hero-slide-volunteering-mobile.jpg 1x, ./img/hero-slide-volunteering-mobile@2x.jpg 2x">
+                  <source type="image/jpeg" media="(max-width: 1199px)"
+                    srcset="./img/hero-slide-volunteering-tablet.jpg 1x, ./img/hero-slide-volunteering-tablet@2x.jpg 2x">
+                  <img src="./img/hero-slide-volunteering-desktop.jpg" srcset="./img/hero-slide-volunteering-desktop@2x.jpg 2x" width="1440" height="800" alt="">
+                </picture>
+              </div>
+              <div class="hero__slide-content-wrapper">
+                <div class="hero__slide-title-wrapper">
+                  <h3>Волонтёрские программы - внесите свой вклад в общество</h3>
+                </div>
+                <div class="hero__slide-second-row-wrapper">
+                  <div class="hero__slide-text-wrapper">
+                    <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                  </div>
+                  <div class="hero__slide-button-wrapper">
+                    <a class="btn hero__slide-button" href="#">
+                      <span>Подробнее</span>
+                      <span class="btn__circle hero__slide-button-circle">
+                        <svg width="22" height="22">
+                          <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="hero__slider-item swiper-slide">
+              <div class="hero__slide-image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="./img/hero-slide-internship-mobile.webp 1x, ./img/hero-slide-internship-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="./img/hero-slide-internship-tablet.webp 1x, ./img/hero-slide-internship-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/hero-slide-internship-desktop.webp 1x, ./img/hero-slide-internship-desktop@2x.webp 2x">
+                  <source type="image/jpeg" media="(max-width: 767px)"
+                  srcset="./img/hero-slide-internship-mobile.jpg 1x, ./img/hero-slide-internship-mobile@2x.jpg 2x">
+                  <source type="image/jpeg" media="(max-width: 1199px)"
+                    srcset="./img/hero-slide-internship-tablet.jpg 1x, ./img/hero-slide-internship-tablet@2x.jpg 2x">
+                  <img src="./img/hero-slide-internship-desktop.jpg" srcset="./img/hero-slide-internship-desktop@2x.jpg 2x" width="1440" height="800" alt="">
+                </picture>
+              </div>
+              <div class="hero__slide-content-wrapper">
+                <div class="hero__slide-title-wrapper">
+                  <h3>Программы стажировок в крупнейших компаниях мира</h3>
+                </div>
+                <div class="hero__slide-second-row-wrapper">
+                  <div  class="hero__slide-text-wrapper">
+                    <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                  </div>
+                  <div class="hero__slide-button-wrapper">
+                    <a class="btn hero__slide-button" href="#">
+                      <span>Подробнее</span>
+                      <span class="btn__circle hero__slide-button-circle">
+                        <svg width="22" height="22">
+                          <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+          <div class="hero__slide-bullets-wrapper swiper-pagination" data-hero-pagination>
+            <!-- сюда будут добавлены буллеты для переключения слайдов -->
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+
+      </section>
+    </main>
+  </div>
+  <!-- <div data-test="slider">slider</div>
   <div data-test="about">about</div>
   <div data-test="programs">programs</div>
   <div data-test="grant">grant</div>
@@ -19,7 +224,8 @@
   <div data-test="reviews">reviews</div>
   <div data-test="contacts">contacts</div>
   <div data-test="form">form</div>
-  <div data-test="footer">footer</div>
+  <div data-test="footer">footer</div> -->
+  <!-- <script src="js/vendor/swiper/swiper.js"></script> -->
   <script type="module" src="js/main.js"></script>
 </body>
 

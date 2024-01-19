@@ -2,3 +2,26 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
+// Swiper 11.0.5
+@import "swiper/css/bundle";
+
+// Global
+// ---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+// ---------------------------------
+
+@import "blocks/btn";
+@import "blocks/header";
+@import "blocks/hero";
+// @import "blocks/custom-input";
+
+// ---------------------------------

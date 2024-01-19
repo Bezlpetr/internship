@@ -1,0 +1,124 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 3px 3px 29px;
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: $color-cerulean-blue;
+
+  background-color: $color-transparent;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  cursor: pointer;
+
+  & .btn__circle {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+
+    color: $color-default-white;
+
+    background-color: $color-cerulean-blue;
+    border-radius: 44px;
+  }
+
+  &:disabled {
+    color: $color-mischka;
+
+    background-color: $color-transparent;
+    border: 1px solid $color-mischka;
+    pointer-events: none;
+
+    & .btn__circle {
+      color: $color-default-white-opacity60;
+
+      background-color: $color-mischka;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-cerulean-blue;
+    outline: none;
+
+    & .btn__circle {
+      color: $color-cerulean-blue;
+
+      background-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    color: $color-default-white-opacity70;
+
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-cerulean-blue;
+
+    & .btn__circle {
+      color: $color-cerulean-blue-opacity70;
+
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.btn--blue-background {
+  color: $color-default-white;
+
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white;
+
+  & .btn__circle {
+    color: $color-cerulean-blue;
+
+    background-color: $color-default-white;
+  }
+
+  &:disabled {
+    background-color: $color-cerulean-blue;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-cerulean-blue;
+
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+    outline: none;
+
+    & .btn__circle {
+      color: $color-default-white;
+
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    color: $color-cerulean-blue-opacity70;
+
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+
+    & .btn__circle {
+      color: $color-default-white-opacity70;
+
+      background-color: $color-cerulean-blue;
+    }
+  }
+}
