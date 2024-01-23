@@ -1,23 +1,33 @@
 import Swiper from 'swiper/bundle';
+import { Pagination } from 'swiper/modules';
 
 const initHeroSlider = () => {
   const mainSliderElement = document.querySelector('[data-hero-slider]');
-  const paginationElement = document.querySelector('[data-hero-pagination]');
+  // const paginationElement = document.querySelector('[data-hero-pagination]');
 
-  if (mainSliderElement && paginationElement) {
+  if (mainSliderElement) {
     const swiperHero = new Swiper(mainSliderElement, {
       // Optional parameters
       loop: true,
       autoHeight: true,
+      observer: true,
       // Pagination
+      modules: [Pagination],
       pagination: {
-        // el: '.swiper-pagination',
-        el: paginationElement,
+        el: '.swiper-slide-active .hero__slide-bullets-wrapper',
+        // el: paginationElement,
         type: 'bullets',
         clickable: true,
         bulletElement: 'button',
         bulletClass: 'hero__slide-bullet',
         bulletActiveClass: 'hero__slide-bullet--active',
+      },
+      on: {
+        slideChangeTransitionStart: function () {
+          swiperHero.pagination.init();
+          swiperHero.pagination.render();
+          swiperHero.pagination.update();
+        }
       },
       // autoplay: {
       //   delay: 3000,

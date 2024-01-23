@@ -6,13 +6,14 @@
 // import {iosVhFix} from './utils/ios-vh-fix';
 import './utils/focus-lock';
 import './utils/scroll-lock';
-
+import './utils/ios-checker';
+import {CustomSelect} from './modules/custom-select/custom-select';
 // import {Burger} from './vendor/header/burger';
 // import {StickyHeader} from './vendor/header/sticky-header';
 // import {initLocomotiveScroll} from './vendor/header/init-locomotive-scroll';
 
-// import {initModals} from './modules/modals/init-modals';
-// import {Form} from './modules/form-validate/form';
+import {initModals} from './modules/modals/init-modals';
+import {Form} from './modules/form-validate/form';
 import {initHeroSlider} from './modules/sliders/hero-slider';
 import {initMenu} from './modules/menu/menu';
 import {initHeaderSticky} from './modules/header/header-sticky';
@@ -40,10 +41,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // const stickyHeader = new StickyHeader();
     // stickyHeader.init();
     initHeroSlider();
-    // initModals();
-    // const form = new Form();
-    // window.form = form;
-    // form.init();
+    initModals();
+    const select = new CustomSelect();
+    select.init();
+    const form = new Form();
+    window.form = form;
+    form.init();
   });
 });
 

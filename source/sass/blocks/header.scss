@@ -39,7 +39,7 @@
 }
 
 .header__navigation-toggle {
-  padding: 4px 4px 4px 20px;
+  padding: 3px 3px 3px 19px;
 }
 
 .header__navigation-toggle.is-passive {
@@ -80,9 +80,23 @@
   }
 }
 
+.header__navigation-toggle .header__navigation-toggle-circle {
+  width: 46px;
+  height: 46px;
+  margin-left: 20px;
+}
+
 .header__navigation-toggle-circle svg {
   width: 20px;
   height: 20px;
+}
+
+.header__navigation-toggle span:first-child {
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
 }
 
 .header__navigation-list {

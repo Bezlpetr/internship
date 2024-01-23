@@ -39,7 +39,7 @@ const openMenu = () => {
     changeToggleIcon();
     // document.body.style.overflowY = 'hidden';
     window.focusLock.lock('.header__navigation-list');
-    // window.scrollLock.disableScrolling();
+    window.scrollLock.disableScrolling();
     cancelHeaderSticky();
     setNavigationButtonsListener();
     setWindowListener();
@@ -55,7 +55,7 @@ const closeMenu = () => {
     changeToggleIcon();
     window.focusLock.unlock();
     closeSubmenu();
-    // window.scrollLock.enableScrolling();
+    window.scrollLock.enableScrolling();
     // document.body.style.overflowY = 'visible';
     initHeaderSticky();
     removeNavigationButtonsListener();

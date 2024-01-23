@@ -1,15 +1,24 @@
+.hero {
+  margin-bottom: 120px;
+
+  @include vp-1439 {
+    margin-bottom: 71px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 62px;
+  }
+}
+
 .hero__slider {
   width: 1440px;
-  min-height: 800px;
 
   @include vp-1439 {
     width: 768px;
-    min-height: 1024px;
   }
 
   @include vp-767 {
     width: 320px;
-    min-height: 568px;
   }
 }
 
@@ -23,14 +32,20 @@
 }
 
 .hero__slider-item {
-  padding: 447px 100px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 100px 100px 60px;
+  min-height: 800px;
 
   @include vp-1439 {
-    padding: 691px 45px 60px;
+    min-height: 1024px;
+    padding: 100px 45px 60px;
   }
 
   @include vp-767 {
-    padding: 241px 15px 20px;
+    min-height: 568px;
+    padding: 80px 15px 20px;
   }
 }
 
@@ -254,36 +269,8 @@
   }
 }
 
-.hero__slide-button {
-  @include vp-767 {
-    padding: 3px 3px 3px 19px;
-  }
-}
-
-.hero__slide-button span:first-child {
-  @include vp-767 {
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: 0.24px;
-  }
-}
-
-.hero__slide-button .hero__slide-button-circle {
-  @include vp-767 {
-    width: 34px;
-    height: 34px;
-  }
-}
-
-.hero__slide-button svg {
-  width: 10px;
-  height: 10px;
-}
-
-.hero__slider > .hero__slide-bullets-wrapper {
-  top: 409px;
-  left: 100px;
-  bottom: auto;
+.hero__slider-item > .hero__slide-bullets-wrapper {
+  position: static;
 
   display: flex;
   justify-content: space-between;
@@ -294,15 +281,8 @@
   background-color: $color-default-white;
   border-radius: 20px 20px 0 0;
 
-  @include vp-1439 {
-    top: 653px;
-    left: 45px;
-  }
-
   @include vp-767 {
     width: 80px;
-    top: 213px;
-    left: 15px;
 
     padding: 10px 16px;
     border-radius: 12px 12px 0 0;
