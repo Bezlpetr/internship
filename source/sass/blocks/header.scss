@@ -52,10 +52,18 @@
   &:hover,
   &:focus {
     background-color: $color-cerulean-blue;
+
+    & .btn__circle svg {
+      rotate: none;
+    }
   }
 
   &:active {
     background-color: $color-cerulean-blue;
+
+    & .btn__circle svg {
+      rotate: none;
+    }
   }
 }
 
@@ -72,11 +80,19 @@
   &:focus {
     background-color: $color-default-white;
     border: 1px solid $color-default-white;
+
+    & .btn__circle svg {
+      rotate: none;
+    }
   }
 
   &:active {
     background-color: $color-default-white;
     border: 1px solid $color-default-white;
+
+    & .btn__circle svg {
+      rotate: none;
+    }
   }
 }
 

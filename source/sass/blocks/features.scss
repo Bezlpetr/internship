@@ -40,11 +40,11 @@
 
   @include vp-1439 {
     flex-direction: column;
-    padding: 30px 30px 25px;
+    padding: 29px 29px 25px;
   }
 
   @include vp-767 {
-    padding: 20px 19px 23px;
+    padding: 19px 19px 23px;
   }
 }
 
@@ -61,7 +61,7 @@
 
     @include vp-767 {
       width: 100%;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
   }
 
@@ -97,7 +97,7 @@
 
     @include vp-767 {
       width: 100%;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
   }
 }
@@ -115,7 +115,7 @@
 
     @include vp-767 {
       width: 100%;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
   }
 }
@@ -141,7 +141,7 @@
 
     @include vp-767 {
       width: 100%;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
   }
 
@@ -225,4 +225,15 @@
   color: $color-default-white;
 
   background-color: $color-cerulean-blue;
+
+  @include vp-767 {
+    top: -23px;
+  }
+}
+
+.features__icon-wrapper svg {
+  @include vp-767 {
+    width: 18px;
+    height: 18px;
+  }
 }

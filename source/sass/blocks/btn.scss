@@ -55,33 +55,58 @@
     }
   }
 
-  &:hover,
-  &:focus {
-    color: $color-default-white;
+  &.btn--disabled {
+    color: $color-mischka;
 
-    background-color: $color-cerulean-blue;
-    border: 1px solid $color-cerulean-blue;
-    outline: none;
+    background-color: $color-transparent;
+    border: 1px solid $color-mischka;
+    pointer-events: none;
 
     & .btn__circle {
-      color: $color-cerulean-blue;
+      color: $color-default-white-opacity60;
 
-      background-color: $color-default-white;
+      background-color: $color-mischka;
     }
   }
 
-  &:active {
-    color: $color-default-white-opacity70;
+  &:not(.btn--disabled) {
+    &:hover,
+    &:focus {
+      color: $color-default-white;
 
-    background-color: $color-cerulean-blue;
-    border: 1px solid $color-cerulean-blue;
+      background-color: $color-cerulean-blue;
+      border: 1px solid $color-cerulean-blue;
+      outline: none;
 
-    & .btn__circle {
-      color: $color-cerulean-blue-opacity70;
+      & .btn__circle {
+        color: $color-cerulean-blue;
 
-      background-color: $color-default-white;
+        background-color: $color-default-white;
+      }
+
+      & .btn__circle svg {
+        rotate: 45deg;
+      }
+    }
+
+    &:active {
+      color: $color-default-white-opacity70;
+
+      background-color: $color-cerulean-blue;
+      border: 1px solid $color-cerulean-blue;
+
+      & .btn__circle {
+        color: $color-cerulean-blue-opacity70;
+
+        background-color: $color-default-white;
+      }
+
+      & .btn__circle svg {
+        rotate: 45deg;
+      }
     }
   }
+
 
   &:focus-visible {
     outline: none;
@@ -143,5 +168,46 @@
 
       background-color: $color-cerulean-blue;
     }
+  }
+}
+
+.btn--only-circle {
+  padding: 0;
+
+  border: none;
+
+  & span:first-child {
+    display: none;
+  }
+
+  & .btn__circle {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+
+  & .btn__circle svg {
+    width: 10px;
+    height: 10px;
+
+    background-size: 10px 10px;
+  }
+
+  &:not(.btn--disabled) {
+    &:hover,
+    &:focus {
+      background-color: $color-default-white;
+      border: none;
+    }
+
+    &:active {
+      color: $color-default-white;
+      border: none;
+    }
+  }
+
+
+  &.btn--disabled {
+    border: none;
   }
 }

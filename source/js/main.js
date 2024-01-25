@@ -15,6 +15,7 @@ import {CustomSelect} from './modules/custom-select/custom-select';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initHeroSlider} from './modules/sliders/hero-slider';
+import {initProgramsSlider} from './modules/sliders/programs-slider';
 import {initMenu} from './modules/menu/menu';
 import {initHeaderSticky} from './modules/header/header-sticky';
 
@@ -41,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // const stickyHeader = new StickyHeader();
     // stickyHeader.init();
     initHeroSlider();
+    initProgramsSlider();
     initModals();
     const select = new CustomSelect();
     select.init();
