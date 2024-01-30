@@ -558,6 +558,380 @@
           </div>
         </div>
       </section>
+      <section class="news" id="news" data-test="news">
+        <div class="container news__container">
+          <h2 class="news__title">Новости и материалы</h2>
+          <div class="news__tabs" data-tabs="parent">
+            <div class="news__tabs-controls" data-tabs="controls">
+              <button class="news__tabs-control is-active" type="button" data-tabs="control">Общее</button>
+              <button class="news__tabs-control" type="button" data-tabs="control">Волонтёрство</button>
+              <button class="news__tabs-control" type="button" data-tabs="control">Стажировки</button>
+              <button class="news__tabs-control" type="button" data-tabs="control">Карьера</button>
+              <button class="news__tabs-control" type="button" data-tabs="control">Путешествия</button>
+            </div>
+            <div class="news__tabs-content" data-tabs="content">
+              <div class="news__tabs-element" data-tabs="element">
+                <div class="news__slider swiper" data-news-common-slider>
+                  <ol class="news__slider-list swiper-wrapper">
+                    <li class="news__slider-item swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide1-tablet.webp 1x, ./img/news-slide1-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide1-desktop.webp 1x, ./img/news-slide1-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide1-tablet.jpg 1x, ./img/news-slide1-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide1-desktop.jpg" srcset="./img/news-slide1-desktop@2x.jpg 2x"
+                            width="604" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Интервью с&nbsp;участницей программы стажировки</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>23/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item news__slider-item--79date swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide2-tablet.webp 1x, ./img/news-slide2-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide2-desktop.webp 1x, ./img/news-slide2-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide2-tablet.jpg 1x, ./img/news-slide2-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide2-desktop.jpg" srcset="./img/news-slide2-desktop@2x.jpg 2x"
+                            width="286" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Путешествуем по&nbsp;миру</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>20/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item news__slider-item--75date swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide3-tablet.webp 1x, ./img/news-slide3-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide3-desktop.webp 1x, ./img/news-slide3-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide3-tablet.jpg 1x, ./img/news-slide3-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide3-desktop.jpg" srcset="./img/news-slide3-desktop@2x.jpg 2x"
+                            width="286" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Новая программа волонтёрства</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>17/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item news__slider-item--76date swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide4-tablet.webp 1x, ./img/news-slide4-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide4-desktop.webp 1x, ./img/news-slide4-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide4-tablet.jpg 1x, ./img/news-slide4-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide4-desktop.jpg" srcset="./img/news-slide4-desktop@2x.jpg 2x"
+                            width="286" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Построй свою карьеру</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>10/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide1-tablet.webp 1x, ./img/news-slide1-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide1-desktop.webp 1x, ./img/news-slide1-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide1-tablet.jpg 1x, ./img/news-slide1-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide1-desktop.jpg" srcset="./img/news-slide1-desktop@2x.jpg 2x"
+                            width="604" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Интервью с участницей программы стажировки</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>23/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item news__slider-item--79date swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide2-tablet.webp 1x, ./img/news-slide2-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide2-desktop.webp 1x, ./img/news-slide2-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide2-tablet.jpg 1x, ./img/news-slide2-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide2-desktop.jpg" srcset="./img/news-slide2-desktop@2x.jpg 2x"
+                            width="286" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Путешествуем по миру</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>20/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item news__slider-item--75date swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide3-tablet.webp 1x, ./img/news-slide3-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide3-desktop.webp 1x, ./img/news-slide3-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide3-tablet.jpg 1x, ./img/news-slide3-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide3-desktop.jpg" srcset="./img/news-slide3-desktop@2x.jpg 2x"
+                            width="286" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Новая программа волонтёрства</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>17/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item news__slider-item--79date swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide2-tablet.webp 1x, ./img/news-slide2-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide2-desktop.webp 1x, ./img/news-slide2-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide2-tablet.jpg 1x, ./img/news-slide2-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide2-desktop.jpg" srcset="./img/news-slide2-desktop@2x.jpg 2x"
+                            width="286" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Путешествуем по миру</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>20/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Какие места посещают наши студенты весной</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__slider-item news__slider-item--75date swiper-slide">
+                      <div class="news__slide-image-wrapper">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 1439px)"
+                            srcset="./img/news-slide3-tablet.webp 1x, ./img/news-slide3-tablet@2x.webp 2x">
+                          <source type="image/webp"
+                            srcset="./img/news-slide3-desktop.webp 1x, ./img/news-slide3-desktop@2x.webp 2x">
+                          <source type="image/jpeg" media="(max-width: 767px)"
+                            srcset="./img/news-slide3-tablet.jpg 1x, ./img/news-slide3-tablet@2x.jpg 2x">
+                          <img src="./img/news-slide3-desktop.jpg" srcset="./img/news-slide3-desktop@2x.jpg 2x"
+                            width="286" height="400" alt="">
+                        </picture>
+                      </div>
+                      <div class="news__slide-content-wrapper">
+                        <div class="news__slide-title-wrapper">
+                          <h3>Новая программа волонтёрства</h3>
+                        </div>
+                        <div class="news__slide-date-wrapper">
+                          <span>17/03/2023</span>
+                        </div>
+                        <div class="news__slide-second-row-wrapper">
+                          <div class="news__slide-text-wrapper">
+                            <p>Программа помощи детям длительностью 4 месяца</p>
+                          </div>
+                          <div class="news__slide-button-wrapper">
+                            <a class="btn btn--only-circle news__slide-button" href="#" aria-label="Нажмите, чтобы прочитать полностью.">
+                              <span></span>
+                              <span class="btn__circle news__slide-button-circle">
+                                <svg width="22" height="22">
+                                  <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                  <div class="news__slider-control-wrapper">
+                    <div class="news__slider-pagination-wrapper swiper-pagination" data-news-common-slider-pagination>
+                      <!-- сюда будет добавлена пагинация для переключения слайдов -->
+                    </div>
+                    <button class="news__slider-button news__slider-button--prev swiper-button-prev" type="button" data-news-common-slider-button-prev aria-label="Показать предыдущую новость.">
+                      <svg width="11" height="12">
+                        <use href="__spritemap#sprite-icon-arrow"></use>
+                      </svg>
+                    </button>
+                    <button class="news__slider-button news__slider-button--next swiper-button-next" type="button" data-news-common-slider-button-next aria-label="Показать следующую новость." >
+                      <svg width="11" height="12">
+                        <use href="__spritemap#sprite-icon-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="news__tabs-element" data-tabs="element"></div>
+              <div class="news__tabs-element" data-tabs="element"></div>
+              <div class="news__tabs-element" data-tabs="element"></div>
+              <div class="news__tabs-element" data-tabs="element"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- <div data-test="slider">slider</div>
       <div data-test="about">about</div>

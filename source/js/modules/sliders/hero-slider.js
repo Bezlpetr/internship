@@ -34,17 +34,17 @@ const initHeroSlider = () => {
       // },
       //Breakpoints
       breakpoints: {
-        // when window width is >= 1200px
-        1440: {
-          allowTouchMove: false,
+        // when window width is >= 0px
+        0: {
+          allowTouchMove: true,
         },
         // when window width is >= 768px
         768: {
           allowTouchMove: true,
         },
-        // when window width is >= 0px
-        0: {
-          allowTouchMove: true,
+        // when window width is >= 1200px
+        1440: {
+          allowTouchMove: false,
         },
       },
     });
