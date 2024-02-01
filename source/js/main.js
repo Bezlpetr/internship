@@ -13,6 +13,7 @@ import {CustomSelect} from './modules/custom-select/custom-select';
 // import {initLocomotiveScroll} from './vendor/header/init-locomotive-scroll';
 
 import {initTabs} from './modules/tabs/init-tabs';
+import {initAccordions} from './modules/accordion/init-accordion';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initHeroSlider} from './modules/sliders/hero-slider';
@@ -53,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     initTabs();
+    initAccordions();
   });
 });
 

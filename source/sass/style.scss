@@ -6,6 +6,13 @@
 // Swiper 11.0.5
 @import "swiper/css/bundle";
 
+// Tabs
+// @import "vendor/data-tabs";
+
+
+//Accordion
+@import "vendor/data-accordion";
+
 // Global
 // ---------------------------------
 
@@ -31,5 +38,8 @@
 @import "blocks/programs";
 @import "blocks/grant";
 @import "blocks/news";
+// @import "blocks/tabs";
+// @import "blocks/accordion";
+@import "blocks/faq";
 
 // ---------------------------------
