@@ -19,6 +19,7 @@ import {Form} from './modules/form-validate/form';
 import {initHeroSlider} from './modules/sliders/hero-slider';
 import {initProgramsSlider} from './modules/sliders/programs-slider';
 import {initNewsSlider} from './modules/sliders/news-slider';
+import {initReviewsSlider} from './modules/sliders/reviews-slider';
 import {initMenu} from './modules/menu/menu';
 import {initHeaderSticky} from './modules/header/header-sticky';
 
@@ -47,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initProgramsSlider();
     initNewsSlider();
+    initReviewsSlider();
     initModals();
     const select = new CustomSelect();
     select.init();
