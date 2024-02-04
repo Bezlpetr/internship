@@ -3,17 +3,20 @@ const baseSuccessCallback = (event) => {
   event.preventDefault();
   // В данном колбеке бэкендер, либо разработчик при необходимости будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки или успешную отправку формы на сервер
   const url = 'https://echo.htmlacademy.ru/';
-  const formData = new FormData(document.querySelector('.form__container form'));
-
+  // const formData = new FormData(document.querySelector('.form__container form'));
+  const formData = new FormData(event.target);
   fetch(url, {
     method: 'POST',
     body: formData,
   }).then((response) => response.text()).then((data) => {
-    document.body.innerHTML = `<pre>${data}</pre>`;
+    // document.body.innerHTML = `<pre>${data}</pre>`;
+    console.log('Результат', data);
   }).catch(() => {
     document.body.innerHTML = 'Ошибка: не удалось отправить форму на сервер';
   });
-
+  if (event.target.closest('.modal.is-active')) {
+    modals.close(document.querySelector('.modal.is-active').dataset.modal);
+  }
 };
 
 const baseErrorCallback = (event) => {

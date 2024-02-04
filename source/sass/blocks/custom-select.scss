@@ -211,7 +211,9 @@
     height: 16px;
     margin-left: auto;
 
-    background-image:  url("/img/icon-arrow-down-select.svg");
+    background-color: $color-charcoal;
+    mask-image:  url("/img/icon-arrow-down-select.svg");
+    mask-repeat: no-repeat;
 
     transition: transform 0.3s ease;
 

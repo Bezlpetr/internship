@@ -1,0 +1,414 @@
+.form__container {
+  position: relative;
+  margin-bottom: 120px;
+
+  @include vp-1439 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 60px;
+  }
+}
+
+.form__content-wrapper {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 100px;
+  bottom: 0;
+
+  width: 498px;
+  height: 803px;
+  padding: 82px 74px 40px;
+
+  background-color: $color-cerulean-blue;
+  border-radius: 16px;
+
+  @include vp-1439 {
+    left: 45px;
+
+    width: 442px;
+    height: 780px;
+    padding: 60px 45px 50px;
+  }
+
+  @include vp-767 {
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 290px;
+    height: 753px;
+    padding: 50px 15px 50px;
+    margin: 0 auto;
+  }
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $color-default-white;
+
+  @include vp-1439 {
+    margin-bottom: 28px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.form__text-wrapper {
+  margin-bottom: 29px;
+
+  @include vp-1439 {
+    margin-bottom: 32px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
+}
+
+.form__text-wrapper p {
+  margin: 0;
+
+  color: $color-alabaster;
+
+  @include vp-1439 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.form__text-wrapper br {
+  display: none;
+
+  @include vp-767 {
+    display: inline;
+  }
+}
+
+.form__form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include vp-767 {
+    row-gap: 21px;
+  }
+}
+
+.form__input-wrapper {
+  row-gap: 8px;
+
+  @include vp-767 {
+    row-gap: 11px;
+  }
+
+  & label {
+    color: $color-alabaster;
+
+    @include vp-767 {
+      font-size: 12px;
+    }
+  }
+
+  & input {
+    @include vp-767 {
+      height: 50px;
+    }
+  }
+
+  & textarea {
+    height: 98px;
+
+    @include vp-767 {
+      height: 94px;
+    }
+  }
+
+  & input,
+  & textarea {
+    color: $color-default-white;
+
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-default-white-opacity30;
+
+    &:disabled {
+      border: 1px solid $color-default-white;
+      opacity: 0.4;
+      background-color: $color-default-white-opacity20;
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        border: 1px solid $color-default-white;
+        cursor: pointer;
+      }
+
+      &:focus {
+        border: 1px solid $color-default-white;
+      }
+    }
+  }
+}
+
+.form__input-wrapper.custom-textarea {
+  margin-bottom: 1px;
+
+  @include vp-1439 {
+    margin-bottom: 0;
+  }
+}
+
+.form__select-wrapper {
+  margin-bottom: 3px;
+
+  @include vp-1439 {
+    margin-bottom: 4px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
+
+  & .custom-select__label {
+    color: $color-alabaster;
+
+    @include vp-1439 {
+      margin-bottom: 8px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 11px;
+
+      font-size: 12px;
+    }
+  }
+
+  & .custom-select__button {
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-default-white-opacity30;
+
+    @include vp-767 {
+      height: 50px;
+    }
+
+    &:focus,
+      &:hover {
+        border: 1px solid $color-default-white;
+      }
+  }
+
+  & .custom-select__icon {
+    background-color: $color-default-white;
+  }
+}
+
+.form__checkbox-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+
+  &.is-invalid {
+    label::before {
+      background-color: $color-wild-watermelon-opacity20;
+      border: 1px solid $color-wild-watermelon;
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    &.is-invalid {
+      color: $color-wild-watermelon;
+    }
+
+    //Стили для подписи к input при правильном заполнении поля
+    // &.is-valid {
+    //   color: #15ab07;
+    // }
+  }
+}
+
+.form .form__checkbox-wrapper label {
+  position: relative;
+
+  display: block;
+  padding-left: 30px;
+
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-default-white;
+
+  opacity: 0.9;
+
+  @include vp-767 {
+    line-height: 14px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+
+    line-height: 10px;
+
+    border: 1px solid $color-default-white-opacity70;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+
+    display: none;
+    width: 10px;
+    height: 10px;
+
+    background-color: $color-cerulean-blue;
+    mask-image: url("/img/icon-check.svg");
+    mask-repeat: no-repeat;
+  }
+}
+
+.form__checkbox-wrapper input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+
+  &:hover + label {
+    cursor: pointer;
+  }
+
+  &:hover + label::before,
+  &:focus + label::before {
+    border: 1px solid $color-default-white;
+    outline: none;
+  }
+
+  &:disabled + label {
+    cursor: default;
+  }
+
+  &:disabled + label::before {
+    background-color: $color-mischka;
+    border: 1px solid $color-default-white;
+  }
+}
+
+.form__checkbox-wrapper input:checked {
+  & + label::before {
+    background-color: $color-default-white;
+  }
+
+  & + label::after {
+    display: block;
+  }
+
+  &:hover + label::before,
+  &:focus + label::before {
+    background-color: $color-cerulean-blue;
+  }
+
+  &:hover + label::after,
+  &:focus + label::after {
+    background-color: $color-default-white;
+  }
+
+  &:disabled + label::before {
+    background-color: $color-mischka;
+    border: 1px solid $color-mischka;
+  }
+
+  &:disabled + label::after {
+    background-color: $color-default-white;
+  }
+}
+
+.form__image-wrapper {
+  width: 1240px;
+  height: 803px;
+
+  @include vp-1439 {
+    width: 678px;
+    height: 780px;
+  }
+
+  @include vp-767 {
+    width: 320px;
+    height: 753px;
+  }
+}
+
+.form__image-wrapper img {
+  width: 1240px;
+  height: 803px;
+
+  border-radius: 16px;
+  object-fit: cover;
+
+  @include vp-1439 {
+    width: 678px;
+    height: 780px;
+  }
+
+  @include vp-767 {
+    width: 320px;
+    height: 753px;
+  }
+}
+
+.form__submit-button {
+  margin-top: 24px;
+
+  @include vp-767 {
+    margin-top: 8px;
+  }
+
+  & > span:first-child {
+    margin: 0 auto;
+  }
+}

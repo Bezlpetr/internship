@@ -15,7 +15,7 @@ import {CustomSelect} from './modules/custom-select/custom-select';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+import {Form} from './vendor/form-validate/form';
 import {initHeroSlider} from './modules/sliders/hero-slider';
 import {initProgramsSlider} from './modules/sliders/programs-slider';
 import {initNewsSlider} from './modules/sliders/news-slider';

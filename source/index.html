@@ -1176,7 +1176,7 @@
               <div class="contacts__item-wrapper">
                 <dt class="contacts__item">Email</dt>
                 <dd class="contacts__description">
-                  <a class="contacts__link" href="mailto:omsk@supergym.ru">Info@stazh.ru</a>
+                  <a class="contacts__link" href="mailto:info@stazh.ru">Info@stazh.ru</a>
                 </dd>
               </div>
             </dl>
@@ -1194,6 +1194,79 @@
               <source type="image/jpeg" media="(max-width: 1439px)"
                 srcset="./img/map-tablet.jpg 1x, ./img/map-tablet@2x.jpg 2x">
               <img src="./img/map-desktop.jpg" srcset="./img/map-desktop@2x.jpg 2x" width="1240" height="500" alt="Карта центрального офиса проекта Стажировка по адресу город Новосибирск, улица Щетинкина, дом 68, культурный центр.">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="form" id="form" data-test="form">
+        <div class="container form__container">
+          <div class="form__content-wrapper">
+            <h2 class="form__title">Напишите нам</h2>
+            <div class="form__text-wrapper">
+              <p>Оставьте ваши контакты, если у вас остались вопросы —<br> мы на них ответим!</p>
+            </div>
+            <div class="form__form-wrapper" data-form-validate data-callback="base" data-parent-validate="base"
+              data-message-base="Заполните все данные" data-message-extra="Неверный ввод данных">
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__input-wrapper custom-input" data-validate-type="text"
+                  data-message-base="Поле обязательно" data-required>
+                  <label for="form-name">Имя</label>
+                  <input type="text" name="form-name" id="form-name" required>
+                </div>
+                <div class="form__input-wrapper custom-input" data-validate-type="phone"
+                  data-message-base="Поле обязательно" data-message-extra="Поле некорректно" data-required>
+                  <label for="form-phone">Телефон</label>
+                  <input type="tel" name="form-phone" id="form-phone" required >
+                </div>
+                <div class="form__input-wrapper custom-textarea" data-validate-type="text"
+                  data-message-base="Поле обязательно" data-message-extra="Поле некорректно" data-required>
+                  <label for="form-message">Ваше сообщение</label>
+                  <textarea name="form-message" id="form-message" required ></textarea>
+                </div>
+                <div class="form__select-wrapper custom-select" data-select data-name="form-city" data-validate-type="select" data-required>
+                  <span class="custom-select__label">Выберите город</span>
+                  <span class="custom-select__error">Поле обязательно</span>
+                  <!-- <span class="custom-select__placeholder">some-placeholder</span> -->
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                    <span class="custom-select__text"></span>
+                    <span class="custom-select__icon"></span>
+                  </button>
+                  <ul class="custom-select__list">
+                    <li class="custom-select__item" tabindex="0" data-select-value=""></li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">Санкт-Петербург</li>
+                  </ul>
+                </div>
+                <div class="form__checkbox-wrapper" data-validate-type="checkbox" data-message-base="Поле обязательно"
+                  data-required>
+                  <input type="checkbox" name="form-approve" id="form-approve" required >
+                  <label for="form-approve">Я согласен на обработку моих персональных данных</label>
+                </div>
+                <button class="btn btn--blue-background form__submit-button" type="submit">
+                  <span>Отправить</span>
+                  <span class="btn__circle">
+                    <svg width="22" height="22">
+                      <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="form__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="./img/form-image-mobile.webp 1x, ./img/form-image-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1439px)"
+                srcset="./img/form-image-tablet.webp 1x, ./img/form-image-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="./img/form-image-desktop.webp 1x, ./img/form-image-desktop@2x.webp 2x">
+              <source type="image/jpeg" media="(max-width: 767px)"
+                srcset="./img/form-image-mobile.jpg 1x, ./img/form-image-mobile@2x.jpg 2x">
+              <source type="image/jpeg" media="(max-width: 1439px)"
+                srcset="./img/form-image-tablet.jpg 1x, ./img/form-image-tablet@2x.jpg 2x">
+              <img src="./img/form-image-desktop.jpg" srcset="./img/form-image-desktop@2x.jpg 2x" width="1240" height="803" alt="">
             </picture>
           </div>
         </div>
@@ -1229,15 +1302,15 @@
             <form action="https://echo.htmlacademy.ru/" method="post">
               <div class="modal__input-wrapper custom-input" data-validate-type="text"
                 data-message-base="Поле обязательно" data-required>
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" required>
+                <label for="modal-name">Имя</label>
+                <input type="text" name="modal-name" id="modal-name" required>
               </div>
               <div class="modal__input-wrapper custom-input" data-validate-type="phone"
-                data-message-base="Поле обязательно" data-message-extra="Поле некорректно" data-required>
-                <label for="phone">Телефон</label>
-                <input type="tel" name="phone" id="phone" required>
+                data-message-base="Поле обязательно" data-message-extra="Поле некорректно" data-required >
+                <label for="modal-phone">Телефон</label>
+                <input type="tel" name="modal-phone" id="modal-phone" required >
               </div>
-              <div class="custom-select" data-select data-name="city" data-validate-type="select" data-required>
+              <div class="custom-select" data-select data-name="modal-city" data-validate-type="select" data-required>
                 <span class="custom-select__label">Выберите город</span>
                 <span class="custom-select__error">Поле обязательно</span>
                 <!-- <span class="custom-select__placeholder">some-placeholder</span> -->
@@ -1254,8 +1327,8 @@
               </div>
               <div class="modal__checkbox-wrapper" data-validate-type="checkbox" data-message-base="Поле обязательно"
                 data-required>
-                <input type="checkbox" name="approve" id="approve" required>
-                <label for="approve">Я согласен на обработку моих персональных данных</label>
+                <input type="checkbox" name="modal-approve" id="modal-approve" required>
+                <label for="modal-approve">Я согласен на обработку моих персональных данных</label>
               </div>
               <button class="btn modal__form-button" type="submit">
                 <span>Отправить</span>

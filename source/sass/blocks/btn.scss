@@ -107,7 +107,6 @@
     }
   }
 
-
   &:focus-visible {
     outline: none;
   }
@@ -142,31 +141,33 @@
     background-color: $color-cerulean-blue;
   }
 
-  &:hover,
-  &:focus {
-    color: $color-cerulean-blue;
+  &:not(.btn--disabled) {
+    &:hover,
+    &:focus {
+      color: $color-cerulean-blue;
 
-    background-color: $color-default-white;
-    border: 1px solid $color-default-white;
-    outline: none;
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
+      outline: none;
 
-    & .btn__circle {
-      color: $color-default-white;
+      & .btn__circle {
+        color: $color-default-white;
 
-      background-color: $color-cerulean-blue;
+        background-color: $color-cerulean-blue;
+      }
     }
-  }
 
-  &:active {
-    color: $color-cerulean-blue-opacity70;
+    &:active {
+      color: $color-cerulean-blue-opacity70;
 
-    background-color: $color-default-white;
-    border: 1px solid $color-default-white;
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
 
-    & .btn__circle {
-      color: $color-default-white-opacity70;
+      & .btn__circle {
+        color: $color-default-white-opacity70;
 
-      background-color: $color-cerulean-blue;
+        background-color: $color-cerulean-blue;
+      }
     }
   }
 }
