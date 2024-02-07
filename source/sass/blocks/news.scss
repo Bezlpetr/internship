@@ -98,10 +98,6 @@
     letter-spacing: 0.24px;
   }
 
-  &.is-active {
-    border: 1px solid $color-cerulean-blue;
-  }
-
   &:not(.is-active) {
     &:focus,
     &:hover {
@@ -109,6 +105,10 @@
       cursor: pointer;
     }
   }
+}
+
+.news__tabs-control.is-active {
+  border: 1px solid $color-cerulean-blue;
 }
 
 .news__tabs-element {
@@ -314,14 +314,13 @@
   &::after {
     content: "";
     position: absolute;
-    right: -16px;;
+    right: -16px;
     bottom: 0;
 
     width: 16px;
     height: 16px;
 
     background-color: $color-alabaster;
-    -webkit-mask-image: url("/img/icon-angle.svg");
     mask-image: url("/img/icon-angle.svg");
     mask-repeat: no-repeat;
     mask-size: 16px 16px;
@@ -386,7 +385,6 @@
     height: 16px;
 
     background-color: $color-alabaster;
-    -webkit-mask-image: url("/img/icon-angle.svg");
     mask-image: url("/img/icon-angle.svg");
     mask-repeat: no-repeat;
     mask-size: 16px 16px;
@@ -395,14 +393,13 @@
   &::after {
     content: "";
     position: absolute;
-    right: -16px;;
+    right: -16px;
     bottom: 0;
 
     width: 16px;
     height: 16px;
 
     background-color: $color-alabaster;
-    -webkit-mask-image: url("/img/icon-angle.svg");
     mask-image: url("/img/icon-angle.svg");
     mask-repeat: no-repeat;
     mask-size: 16px 16px;
@@ -454,14 +451,13 @@
   &::after {
     content: "";
     position: absolute;
-    right: -16px;;
+    right: -16px;
     bottom: 0;
 
     width: 16px;
     height: 16px;
 
     background-color: $color-alabaster;
-    -webkit-mask-image: url("/img/icon-angle.svg");
     mask-image: url("/img/icon-angle.svg");
     mask-repeat: no-repeat;
     mask-size: 16px 16px;
@@ -555,23 +551,23 @@
   &:not(.news__slide-bullet--active) {
     &:hover,
     &:focus {
-    color: $color-cerulean-blue;
+      color: $color-cerulean-blue;
 
-    border: 1px solid $color-cerulean-blue;
-    opacity: 1;
-    cursor: pointer;
-  }
+      border: 1px solid $color-cerulean-blue;
+      opacity: 1;
+      cursor: pointer;
+    }
 
-  &:active {
-    color: $color-default-white;
+    &:active {
+      color: $color-default-white;
 
-    background-color: $color-endeavour;
-    border: 1px solid $color-transparent;
-    opacity: 1;
+      background-color: $color-endeavour;
+      border: 1px solid $color-transparent;
+      opacity: 1;
     }
   }
 
-  //Это для дизайнера, который отрисовал одинаковое количество листов в слайдере на всех разрешениях
+  // Это для дизайнера, который отрисовал одинаковое количество листов в слайдере на всех разрешениях
   &:nth-child(5),
   &:nth-child(6) {
     display: none;
@@ -605,34 +601,34 @@
     display: none;
   }
 
-   & svg {
-    color: $color-cerulean-blue;
-
-    width: 11px;
-    height: 12px;
-  }
-
   &:focus,
   &:hover {
     background-color: $color-default-white;
   }
+}
 
-  &:active {
-    background-color: $color-default-white;
+.news__slider-button svg {
+  color: $color-cerulean-blue;
 
-    & svg {
-      color: $color-cerulean-blue-opacity70;
-    }
-  }
+  width: 11px;
+  height: 12px;
+}
 
-  &:disabled {
-    background-color: $color-transparent;
-    opacity: 1;
+.news__slider-button:active {
+  background-color: $color-default-white;
+}
 
-    & svg {
-      color: $color-mischka;
-    }
-  }
+.news__slider-button:active svg {
+  color: $color-cerulean-blue-opacity70;
+}
+
+.news__slider-button:disabled {
+  background-color: $color-transparent;
+  opacity: 1;
+}
+
+.news__slider-button:disabled svg {
+  color: $color-mischka;
 }
 
 .news__slider-button--prev {

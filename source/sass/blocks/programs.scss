@@ -161,13 +161,13 @@
   @include vp-1439 {
     min-width: 173px;
     max-width: 220px;
-    padding: 14px 18px 0 18px;
+    padding: 14px 18px 0;
   }
 
   @include vp-767 {
     min-width: 146px;
     max-width: 190px;
-    padding: 18px 18px 6px 18px;
+    padding: 18px 18px 6px;
   }
 
   &::before {
@@ -211,7 +211,7 @@
   padding: 12px 18px 15px;
 
   background-color: $color-default-white;
-  border-radius: 0px 12px 12px 12px;
+  border-radius: 0 12px 12px;
 
   @include vp-1439 {
     width: 263px;
@@ -242,7 +242,7 @@
     line-height: 20px;
   }
 
-  @include vp-767  {
+  @include vp-767 {
     font-size: 12px;
     line-height: 14px;
   }
@@ -299,34 +299,34 @@
     display: none;
   }
 
-  & svg {
-    color: $color-cerulean-blue;
-
-    width: 11px;
-    height: 12px;
-  }
-
   &:focus,
   &:hover {
     background-color: $color-default-white;
   }
+}
 
-  &:active {
-    background-color: $color-default-white;
+.programs__slider-button svg {
+  color: $color-cerulean-blue;
 
-    & svg {
-      color: $color-cerulean-blue-opacity70;
-    }
-  }
+  width: 11px;
+  height: 12px;
+}
 
-  &:disabled {
-    background-color: $color-transparent;
-    opacity: 1;
+.programs__slider-button:active {
+  background-color: $color-default-white;
+}
 
-    & svg {
-      color: $color-mischka;
-    }
-  }
+.programs__slider-button:active svg {
+  color: $color-cerulean-blue-opacity70;
+}
+
+.programs__slider-button:disabled {
+  background-color: $color-transparent;
+  opacity: 1;
+}
+
+.programs__slider-button:disabled svg {
+  color: $color-mischka;
 }
 
 .programs__slider-button--next {

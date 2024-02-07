@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="&#128119;Получи незаменимый опыт работы в ведущих мировых компаниях и государственных организациях &#127942;Стань волонтером, помогай другим и развивай свои лидерские качества &#128213;Получи образование за рубежом и измени своё будущее.">
-  <title>Стажировка — международный проект для повышения квалификации молодых специалистов</title>
+  <title>Прокачай свои карьерные навыки с проектом Стажировка</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="preload" href="./fonts/manrope-v15-cyrillic_latin-300.woff2" type="font/woff2" as="font"
@@ -20,18 +20,18 @@
 
 <body>
   <div class="wrapper">
-    <div class="wrapper__overlay visually-hidden" data-wrapper-overlay></div>
-    <header class="header " data-header>
-      <div class="container header__container" data-header-sticky data-hide-point="50">
+    <header class="header" data-header="sticky">
+      <div class="header__overlay visually-hidden" data-header="overlay"></div>
+      <div class="container header__container" >
         <a class="header__logo-link">
           <svg width="30" height="30">
             <use href="__spritemap#sprite-icon-logo"></use>
           </svg>
           <span class="visually-hidden">Логотип проекта "Стажировка".</span>
         </a>
-        <nav class="header__navigation">
+        <nav class="header__navigation" >
           <button class="btn header__navigation-toggle is-passive" type="button" aria-label="Открыть меню."
-            data-navigation-toggle>
+            data-header="toggle">
             <span>Меню</span>
             <span class="btn__circle header__navigation-toggle-circle">
               <svg width="22" height="22">
@@ -39,55 +39,55 @@
               </svg>
             </span>
           </button>
-          <ul class="header__navigation-list" data-navigation-list>
+          <ul class="header__navigation-list">
             <li class="header__navigation-item">
-              <a href="#about" data-navigation-button>О проекте</a>
+              <a href="#about" data-navigation="button">О проекте</a>
             </li>
-            <li class="header__navigation-item header__navigation-item--submenu" data-navigation-item-with-submenu>
-              <a href="#" data-navigation-button>Программы</a>
-              <ul class="header__navigation-sublist" data-navigation-submenu>
+            <li class="header__navigation-item header__navigation-item--submenu" data-navigation="item-with-submenu">
+              <a href="#" data-navigation="button">Программы</a>
+              <ul class="header__navigation-sublist" data-navigation="submenu">
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Стажировки</a>
+                  <a href="#programs" data-navigation="button">Стажировки</a>
                 </li>
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Волонтёрство</a>
+                  <a href="#programs" data-navigation="button">Волонтёрство</a>
                 </li>
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Учёба</a>
+                  <a href="#programs" data-navigation="button">Учёба</a>
                 </li>
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Религия</a>
+                  <a href="#programs" data-navigation="button">Религия</a>
                 </li>
               </ul>
             </li>
             <li class="header__navigation-item">
-              <a href="#" data-navigation-button>Как поехать</a>
+              <a href="#grant" data-navigation="button">Как поехать</a>
             </li>
             <li class="header__navigation-item">
-              <a href="#" data-navigation-button>Отзывы</a>
+              <a href="#reviews" data-navigation="button">Отзывы</a>
             </li>
-            <li class="header__navigation-item header__navigation-item--submenu" data-navigation-item-with-submenu>
-              <a href="#" data-navigation-button>Новости</a>
-              <ul class="header__navigation-sublist" data-navigation-submenu>
+            <li class="header__navigation-item header__navigation-item--submenu" data-navigation="item-with-submenu">
+              <a href="#" data-navigation="button">Новости</a>
+              <ul class="header__navigation-sublist" data-navigation="submenu">
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Общее</a>
+                  <a href="#news" data-navigation="button">Общее</a>
                 </li>
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Волонтёрство</a>
+                  <a href="#news" data-navigation="button">Волонтёрство</a>
                 </li>
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Стажировки</a>
+                  <a href="#news" data-navigation="button">Стажировки</a>
                 </li>
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Карьера</a>
+                  <a href="#news" data-navigation="button">Карьера</a>
                 </li>
                 <li class="header__navigation-sublist-item">
-                  <a href="#" data-navigation-button>Путешествия</a>
+                  <a href="#news" data-navigation="button">Путешествия</a>
                 </li>
               </ul>
             </li>
             <li class="header__navigation-item">
-              <a href="#" data-navigation-button>Контакты</a>
+              <a href="#contacts" data-navigation="button">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -97,7 +97,7 @@
       <h1 class="visually-hidden">Проект "Стажировка".</h1>
       <section class="hero" data-test="slider">
         <h2 class="visually-hidden">Рекламная информация о деятельности проекта "Стажировка".</h2>
-        <div class="hero__slider swiper" data-hero-slider>
+        <div class="hero__slider swiper" data-swiper="hero">
           <ol class="hero__slider-list swiper-wrapper">
             <li class="hero__slider-item swiper-slide">
               <div class="hero__slide-image-wrapper">
@@ -113,10 +113,10 @@
                   <source type="image/jpeg" media="(max-width: 1439px)"
                     srcset="./img/hero-slide-training-tablet.jpg 1x, ./img/hero-slide-training-tablet@2x.jpg 2x">
                   <img src="./img/hero-slide-training-desktop.jpg" srcset="./img/hero-slide-training-desktop@2x.jpg 2x"
-                    width="1440" height="800" alt="">
+                    width="1440" height="800" alt="" >
                 </picture>
               </div>
-              <div class="hero__slide-bullets-wrapper swiper-pagination" data-hero-pagination>
+              <div class="hero__slide-bullets-wrapper swiper-pagination">
                 <!-- сюда будут добавлены буллеты для переключения слайдов -->
               </div>
               <div class="hero__slide-content-wrapper">
@@ -131,7 +131,7 @@
                   <div class="hero__slide-button-wrapper">
                     <a class="btn hero__slide-button" href="#">
                       <span>Подробнее</span>
-                      <span class="btn__circle hero__slide-button-circle">
+                      <span class="btn__circle">
                         <svg width="22" height="22">
                           <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
                         </svg>
@@ -155,10 +155,10 @@
                   <source type="image/jpeg" media="(max-width: 1439px)"
                     srcset="./img/hero-slide-volunteering-tablet.jpg 1x, ./img/hero-slide-volunteering-tablet@2x.jpg 2x">
                   <img src="./img/hero-slide-volunteering-desktop.jpg"
-                    srcset="./img/hero-slide-volunteering-desktop@2x.jpg 2x" width="1440" height="800" alt="">
+                    srcset="./img/hero-slide-volunteering-desktop@2x.jpg 2x" width="1440" height="800" alt="" loading="lazy">
                 </picture>
               </div>
-              <div class="hero__slide-bullets-wrapper swiper-pagination" data-hero-pagination>
+              <div class="hero__slide-bullets-wrapper swiper-pagination">
                 <!-- сюда будут добавлены буллеты для переключения слайдов -->
               </div>
               <div class="hero__slide-content-wrapper">
@@ -173,7 +173,7 @@
                   <div class="hero__slide-button-wrapper">
                     <a class="btn hero__slide-button" href="#">
                       <span>Подробнее</span>
-                      <span class="btn__circle hero__slide-button-circle">
+                      <span class="btn__circle">
                         <svg width="22" height="22">
                           <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
                         </svg>
@@ -197,10 +197,10 @@
                   <source type="image/jpeg" media="(max-width: 1439px)"
                     srcset="./img/hero-slide-internship-tablet.jpg 1x, ./img/hero-slide-internship-tablet@2x.jpg 2x">
                   <img src="./img/hero-slide-internship-desktop.jpg"
-                    srcset="./img/hero-slide-internship-desktop@2x.jpg 2x" width="1440" height="800" alt="">
+                    srcset="./img/hero-slide-internship-desktop@2x.jpg 2x" width="1440" height="800" alt="" loading="lazy">
                 </picture>
               </div>
-              <div class="hero__slide-bullets-wrapper swiper-pagination" data-hero-pagination>
+              <div class="hero__slide-bullets-wrapper swiper-pagination">
                 <!-- сюда будут добавлены буллеты для переключения слайдов -->
               </div>
               <div class="hero__slide-content-wrapper">
@@ -214,7 +214,7 @@
                   <div class="hero__slide-button-wrapper">
                     <a class="btn hero__slide-button" href="#">
                       <span>Подробнее</span>
-                      <span class="btn__circle hero__slide-button-circle">
+                      <span class="btn__circle">
                         <svg width="22" height="22">
                           <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
                         </svg>
@@ -318,7 +318,6 @@
         <div class="container programs__container">
           <div class="programs__text-content-wrapper">
             <h2>Программы</h2>
-            <!-- Для отключения кнопки установи класс btn--disabled -->
             <a class="btn programs__button" href="#">
               <span>Все программы</span>
               <span class="btn__circle">
@@ -328,7 +327,7 @@
               </span>
             </a>
           </div>
-          <div class="programs__slider swiper" data-programs-slider>
+          <div class="programs__slider swiper" data-swiper="programs">
             <ol class="programs__slider-list swiper-wrapper">
               <li class="programs__slider-item swiper-slide">
                 <div class="programs__slide-image-wrapper">
@@ -356,11 +355,10 @@
                       <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
                     </div>
                     <div class="programs__slide-button-wrapper">
-                      <!-- Для отключения кнопки установи класс btn--disabled -->
                       <a class="btn btn--only-circle programs__slide-button " href="#"
                         aria-label="Нажмите, чтобы узнать больше о стажеровке.">
                         <span></span>
-                        <span class="btn__circle hero__slide-button-circle">
+                        <span class="btn__circle">
                           <svg width="22" height="22">
                             <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
                           </svg>
@@ -396,11 +394,10 @@
                       <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
                     </div>
                     <div class="programs__slide-button-wrapper">
-                      <!-- Для отключения кнопки установи класс btn--disabled -->
                       <a class="btn btn--only-circle programs__slide-button " href="#"
                         aria-label="Нажмите, чтобы узнать больше о волонтерстве.">
                         <span></span>
-                        <span class="btn__circle hero__slide-button-circle">
+                        <span class="btn__circle">
                           <svg width="22" height="22">
                             <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
                           </svg>
@@ -436,11 +433,10 @@
                       <p>Получите образование и измените своё будущее.</p>
                     </div>
                     <div class="programs__slide-button-wrapper">
-                      <!-- Для отключения кнопки установи класс btn--disabled -->
                       <a class="btn btn--only-circle programs__slide-button " href="#"
                         aria-label="Нажмите, чтобы узнать больше об обучении.">
                         <span></span>
-                        <span class="btn__circle hero__slide-button-circle">
+                        <span class="btn__circle">
                           <svg width="22" height="22">
                             <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
                           </svg>
@@ -464,7 +460,7 @@
                     <source type="image/jpeg" media="(max-width: 1439px)"
                       srcset="./img/programs-slide-training-tablet.jpg 1x, ./img/programs-slide-training-tablet@2x.jpg 2x">
                     <img src="./img/programs-slide-training-desktop.jpg"
-                      srcset="./img/programs-slide-training-desktop@2x.jpg 2x" width="392" height="420" alt="">
+                      srcset="./img/programs-slide-training-desktop@2x.jpg 2x" width="392" height="420" loading="lazy" alt="">
                   </picture>
                 </div>
                 <div class="programs__slide-content-wrapper">
@@ -476,11 +472,10 @@
                       <p>Получите образование и измените своё будущее.</p>
                     </div>
                     <div class="programs__slide-button-wrapper">
-                      <!-- Для отключения кнопки установи класс btn--disabled -->
                       <a class="btn btn--only-circle programs__slide-button " href="#"
                         aria-label="Нажмите, чтобы узнать больше об обучении.">
                         <span></span>
-                        <span class="btn__circle hero__slide-button-circle">
+                        <span class="btn__circle">
                           <svg width="22" height="22">
                             <use href="__spritemap#sprite-icon-arrow-to-top-right"></use>
                           </svg>
@@ -493,20 +488,18 @@
             </ol>
             <div class="programs__slider-control-wrapper">
               <div class="programs__slider-navigation-wrapper">
-                <button class="programs__slider-button programs__slider-button--prev swiper-button-prev" type="button"
-                  data-programs-slider-button-prev aria-label="Показать информацию о предыдущей программе.">
+                <button class="programs__slider-button programs__slider-button--prev swiper-button-prev" type="button" data-swiper="button-prev" aria-label="Показать информацию о предыдущей программе.">
                   <svg width="11" height="12">
                     <use href="__spritemap#sprite-icon-arrow"></use>
                   </svg>
                 </button>
-                <button class="programs__slider-button programs__slider-button--next swiper-button-next" type="button"
-                  data-programs-slider-button-next aria-label="Показать информацию о следующей программе.">
+                <button class="programs__slider-button programs__slider-button--next swiper-button-next" type="button" data-swiper="button-next" aria-label="Показать информацию о следующей программе.">
                   <svg width="11" height="12">
                     <use href="__spritemap#sprite-icon-arrow"></use>
                   </svg>
                 </button>
               </div>
-              <div class="programs__slider-scrollbar swiper-scrollbar" data-programs-slider-scrollbar></div>
+              <div class="programs__slider-scrollbar swiper-scrollbar" data-swiper="scrollbar"></div>
             </div>
           </div>
         </div>
@@ -577,7 +570,7 @@
             </div>
             <div class="news__tabs-content" data-tabs="content">
               <div class="news__tabs-element" data-tabs="element">
-                <div class="news__slider swiper" data-news-common-slider>
+                <div class="news__slider swiper" data-swiper="news-common">
                   <ol class="news__slider-list swiper-wrapper">
                     <li class="news__slider-item swiper-slide">
                       <div class="news__slide-image-wrapper">
@@ -589,7 +582,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide1-tablet.jpg 1x, ./img/news-slide1-tablet@2x.jpg 2x">
                           <img src="./img/news-slide1-desktop.jpg" srcset="./img/news-slide1-desktop@2x.jpg 2x"
-                            width="604" height="400" alt="">
+                            width="604" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -628,7 +621,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide2-tablet.jpg 1x, ./img/news-slide2-tablet@2x.jpg 2x">
                           <img src="./img/news-slide2-desktop.jpg" srcset="./img/news-slide2-desktop@2x.jpg 2x"
-                            width="286" height="400" alt="">
+                            width="286" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -666,7 +659,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide3-tablet.jpg 1x, ./img/news-slide3-tablet@2x.jpg 2x">
                           <img src="./img/news-slide3-desktop.jpg" srcset="./img/news-slide3-desktop@2x.jpg 2x"
-                            width="286" height="400" alt="">
+                            width="286" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -704,7 +697,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide4-tablet.jpg 1x, ./img/news-slide4-tablet@2x.jpg 2x">
                           <img src="./img/news-slide4-desktop.jpg" srcset="./img/news-slide4-desktop@2x.jpg 2x"
-                            width="286" height="400" alt="">
+                            width="286" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -742,7 +735,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide1-tablet.jpg 1x, ./img/news-slide1-tablet@2x.jpg 2x">
                           <img src="./img/news-slide1-desktop.jpg" srcset="./img/news-slide1-desktop@2x.jpg 2x"
-                            width="604" height="400" alt="">
+                            width="604" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -781,7 +774,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide2-tablet.jpg 1x, ./img/news-slide2-tablet@2x.jpg 2x">
                           <img src="./img/news-slide2-desktop.jpg" srcset="./img/news-slide2-desktop@2x.jpg 2x"
-                            width="286" height="400" alt="">
+                            width="286" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -819,7 +812,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide3-tablet.jpg 1x, ./img/news-slide3-tablet@2x.jpg 2x">
                           <img src="./img/news-slide3-desktop.jpg" srcset="./img/news-slide3-desktop@2x.jpg 2x"
-                            width="286" height="400" alt="">
+                            width="286" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -857,7 +850,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide2-tablet.jpg 1x, ./img/news-slide2-tablet@2x.jpg 2x">
                           <img src="./img/news-slide2-desktop.jpg" srcset="./img/news-slide2-desktop@2x.jpg 2x"
-                            width="286" height="400" alt="">
+                            width="286" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -895,7 +888,7 @@
                           <source type="image/jpeg" media="(max-width: 767px)"
                             srcset="./img/news-slide3-tablet.jpg 1x, ./img/news-slide3-tablet@2x.jpg 2x">
                           <img src="./img/news-slide3-desktop.jpg" srcset="./img/news-slide3-desktop@2x.jpg 2x"
-                            width="286" height="400" alt="">
+                            width="286" height="400" loading="lazy" alt="">
                         </picture>
                       </div>
                       <div class="news__slide-content-wrapper">
@@ -925,17 +918,17 @@
                     </li>
                   </ol>
                   <div class="news__slider-control-wrapper">
-                    <div class="news__slider-pagination-wrapper swiper-pagination" data-news-common-slider-pagination>
+                    <div class="news__slider-pagination-wrapper swiper-pagination" data-swiper="pagination">
                       <!-- сюда будет добавлена пагинация для переключения слайдов -->
                     </div>
                     <button class="news__slider-button news__slider-button--prev swiper-button-prev" type="button"
-                      data-news-common-slider-button-prev aria-label="Показать предыдущую новость.">
+                      data-swiper="button-prev" aria-label="Показать предыдущую новость.">
                       <svg width="11" height="12">
                         <use href="__spritemap#sprite-icon-arrow"></use>
                       </svg>
                     </button>
                     <button class="news__slider-button news__slider-button--next swiper-button-next" type="button"
-                      data-news-common-slider-button-next aria-label="Показать следующую новость.">
+                      data-swiper="button-next" aria-label="Показать следующую новость.">
                       <svg width="11" height="12">
                         <use href="__spritemap#sprite-icon-arrow"></use>
                       </svg>
@@ -1015,7 +1008,7 @@
       <section class="reviews" id="reviews" data-test="reviews">
         <div class="container reviews__container">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__slider swiper" data-reviews-slider>
+          <div class="reviews__slider swiper" data-swiper="reviews">
             <ol class="reviews__slider-list swiper-wrapper">
               <li class="reviews__slider-item swiper-slide">
                 <div class="reviews__slide-header-wrapper">
@@ -1024,7 +1017,7 @@
                       <picture>
                         <source type="image/webp"
                           srcset="./img/reviews-lola-alex.webp 1x, ./img/reviews-lola-alex@2x.webp 2x">
-                        <img src="./img/reviews-lola-alex.jpg" srcset="./img/reviews-lola-alex@2x.jpg 2x" width="90" height="90" alt="Лола Алекс.">
+                        <img src="./img/reviews-lola-alex.jpg" srcset="./img/reviews-lola-alex@2x.jpg 2x" width="90" height="90" alt="Фотография Лолы Алекс.">
                       </picture>
                     </div>
                     <div class="reviews__name-wrapper">
@@ -1054,7 +1047,7 @@
                       <picture>
                         <source type="image/webp"
                           srcset="./img/reviews-david-ivanov.webp 1x, ./img/reviews-david-ivanov@2x.webp 2x">
-                        <img src="./img/reviews-david-ivanov.jpg" srcset="./img/reviews-david-ivanov@2x.jpg 2x" width="90" height="90" alt="Лола Алекс.">
+                        <img src="./img/reviews-david-ivanov.jpg" srcset="./img/reviews-david-ivanov@2x.jpg 2x" width="90" height="90"  alt="Фотография Давида Иванова.">
                       </picture>
                     </div>
                     <div class="reviews__name-wrapper">
@@ -1084,7 +1077,7 @@
                       <picture>
                         <source type="image/webp"
                           srcset="./img/reviews-lola-alex.webp 1x, ./img/reviews-lola-alex@2x.webp 2x">
-                        <img src="./img/reviews-lola-alex.jpg" srcset="./img/reviews-lola-alex@2x.jpg 2x" width="90" height="90" alt="Лола Алекс.">
+                        <img src="./img/reviews-lola-alex.jpg" srcset="./img/reviews-lola-alex@2x.jpg 2x" width="90" height="90" loading="lazy" alt="Фотография Лолы Алекс.">
                       </picture>
                     </div>
                     <div class="reviews__name-wrapper">
@@ -1114,7 +1107,7 @@
                       <picture>
                         <source type="image/webp"
                           srcset="./img/reviews-david-ivanov.webp 1x, ./img/reviews-david-ivanov@2x.webp 2x">
-                        <img src="./img/reviews-david-ivanov.jpg" srcset="./img/reviews-david-ivanov@2x.jpg 2x" width="90" height="90" alt="Лола Алекс.">
+                        <img src="./img/reviews-david-ivanov.jpg" srcset="./img/reviews-david-ivanov@2x.jpg 2x" width="90" height="90" loading="lazy" alt="Фотография Давида Иванова.">
                       </picture>
                     </div>
                     <div class="reviews__name-wrapper">
@@ -1141,19 +1134,19 @@
             <div class="reviews__slider-control-wrapper">
               <div class="reviews__slider-navigation-wrapper">
                 <button class="reviews__slider-button reviews__slider-button--prev swiper-button-prev" type="button"
-                  data-reviews-slider-button-prev aria-label="Показать предыдущий отзыв.">
+                  data-swiper="button-prev" aria-label="Показать предыдущий отзыв.">
                   <svg width="11" height="12">
                     <use href="__spritemap#sprite-icon-arrow"></use>
                   </svg>
                 </button>
                 <button class="reviews__slider-button reviews__slider-button--next swiper-button-next" type="button"
-                  data-reviews-slider-button-next aria-label="Показать следующий отзыв.">
+                  data-swiper="button-next" aria-label="Показать следующий отзыв.">
                   <svg width="11" height="12">
                     <use href="__spritemap#sprite-icon-arrow"></use>
                   </svg>
                 </button>
               </div>
-              <div class="reviews__slider-scrollbar swiper-scrollbar" data-reviews-slider-scrollbar></div>
+              <div class="reviews__slider-scrollbar swiper-scrollbar" data-swiper="scrollbar"></div>
             </div>
           </div>
         </div>
@@ -1193,7 +1186,7 @@
                 srcset="./img/map-mobile.jpg 1x, ./img/map-mobile@2x.jpg 2x">
               <source type="image/jpeg" media="(max-width: 1439px)"
                 srcset="./img/map-tablet.jpg 1x, ./img/map-tablet@2x.jpg 2x">
-              <img src="./img/map-desktop.jpg" srcset="./img/map-desktop@2x.jpg 2x" width="1240" height="500" alt="Карта центрального офиса проекта Стажировка по адресу город Новосибирск, улица Щетинкина, дом 68, культурный центр.">
+              <img src="./img/map-desktop.jpg" srcset="./img/map-desktop@2x.jpg 2x" width="1240" height="500" loading="lazy" alt="Карта центрального офиса проекта Стажировка по адресу город Новосибирск, улица Щетинкина, дом 68, культурный центр.">
             </picture>
           </div>
         </div>
@@ -1226,7 +1219,6 @@
                 <div class="form__select-wrapper custom-select" data-select data-name="form-city" data-validate-type="select" data-required>
                   <span class="custom-select__label">Выберите город</span>
                   <span class="custom-select__error">Поле обязательно</span>
-                  <!-- <span class="custom-select__placeholder">some-placeholder</span> -->
                   <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
                     <span class="custom-select__text"></span>
                     <span class="custom-select__icon"></span>
@@ -1304,21 +1296,21 @@
         </div>
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank" aria-label="Проект Стажировка в Вконтакте.">
+            <a class="footer__social-link" href="#" target="_blank" rel="noreferrer noopener" aria-label="Проект Стажировка в Вконтакте.">
               <svg width="22" height="22">
                 <use href="__spritemap#sprite-icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link " href="#" target="_blank" aria-label="Проект Стажировка в Одноклассниках.">
+            <a class="footer__social-link " href="#" target="_blank" rel="noreferrer noopener" aria-label="Проект Стажировка в Одноклассниках.">
               <svg width="22" height="22">
                 <use href="__spritemap#sprite-icon-ok"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank" aria-label="Проект Стажировка в Reddit.">
+            <a class="footer__social-link" href="#" target="_blank" rel="noreferrer noopener" aria-label="Проект Стажировка в Reddit.">
               <svg width="22" height="22">
                 <use href="__spritemap#sprite-icon-reddit"></use>
               </svg>
@@ -1332,8 +1324,7 @@
       </div>
     </footer>
 
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="callback-request" data-form-callback-request>
+    <div class="modal modal--preload" data-modal="callback-request" >
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -1359,8 +1350,7 @@
               <div class="custom-select" data-select data-name="modal-city" data-validate-type="select" data-required>
                 <span class="custom-select__label">Выберите город</span>
                 <span class="custom-select__error">Поле обязательно</span>
-                <!-- <span class="custom-select__placeholder">some-placeholder</span> -->
-                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций.">
                   <span class="custom-select__text"></span>
                   <span class="custom-select__icon"></span>
                 </button>
@@ -1386,33 +1376,15 @@
               </button>
             </form>
           </div>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть модальное окно." data-close-modal>
             <svg width="22" height="22">
-              <use xlink:href="__spritemap#sprite-icon-cross"></use>
+              <use href="__spritemap#sprite-icon-cross"></use>
             </svg>
           </button>
         </div>
       </div>
     </div>
-
-    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div> -->
-
-
-    <!-- <script src="js/vendor/swiper/swiper.js"></script> -->
   </div>
   <script type="module" src="js/main.js"></script>
 </body>
-
 </html>

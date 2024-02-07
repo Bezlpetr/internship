@@ -1,10 +1,10 @@
 import {initHeaderSticky, cancelHeaderSticky} from '../header/header-sticky';
 
-const headerElement = document.querySelector('[data-header]');
-const navigationToggleElement = document.querySelector('[data-navigation-toggle]');
-const menuButtons = document.querySelectorAll('[data-navigation-button]');
-const iconToggleElement = document.querySelector('[data-navigation-toggle] use');
-const pageBodyOverlayElement = document.querySelector('[data-wrapper-overlay]');
+const headerElement = document.querySelector('[data-header="sticky"]');
+const navigationToggleElement = document.querySelector('[data-header="toggle"]');
+const iconToggleElement = document.querySelector('[data-header="toggle"] use');
+const pageBodyOverlayElement = document.querySelector('[data-header="overlay"]');
+const menuButtons = document.querySelectorAll('[data-navigation="button"]');
 
 const isEnterKey = (evt) => evt.key === 'Enter';
 const isSpaceKey = (evt) => evt.key === ' ';
@@ -21,7 +21,7 @@ const changeToggleIcon = () => {
 };
 
 const closeSubmenu = () => {
-  const allSublistElements = document.querySelectorAll('[data-navigation-item-with-submenu]');
+  const allSublistElements = document.querySelectorAll('[data-navigation="item-with-submenu"]');
 
   allSublistElements.forEach((element) => {
     if (element.classList.contains('is-open')) {
@@ -37,7 +37,6 @@ const openMenu = () => {
     navigationToggleElement.classList.remove('is-passive');
     navigationToggleElement.classList.add('btn--blue-background', 'is-active');
     changeToggleIcon();
-    // document.body.style.overflowY = 'hidden';
     window.focusLock.lock('.header__navigation-list');
     window.scrollLock.disableScrolling();
     cancelHeaderSticky();
@@ -56,7 +55,6 @@ const closeMenu = () => {
     window.focusLock.unlock();
     closeSubmenu();
     window.scrollLock.enableScrolling();
-    // document.body.style.overflowY = 'visible';
     initHeaderSticky();
     removeNavigationButtonsListener();
     removeWindowListener();
@@ -64,10 +62,10 @@ const closeMenu = () => {
 };
 
 function onMenuButtonClick (evt) {
-  if (evt.target.closest('[data-navigation-item-with-submenu]') && !(evt.target.closest('[data-navigation-submenu]'))) {
+  if (evt.target.closest('[data-navigation="item-with-submenu"]') && !(evt.target.closest('[data-navigation="submenu"]'))) {
     evt.preventDefault();
     evt.stopPropagation();
-    const subListElement = evt.target.closest('[data-navigation-item-with-submenu]');
+    const subListElement = evt.target.closest('[data-navigation="item-with-submenu"]');
     subListElement.classList.toggle('is-open');
   } else {
     evt.stopPropagation();
@@ -77,9 +75,9 @@ function onMenuButtonClick (evt) {
 
 function onMenuButtonKeydown (evt) {
   if (isEnterKey(evt) || isSpaceKey(evt)) {
-    if (evt.target.closest('[data-navigation-item-with-submenu]') && !(evt.target.closest('[data-navigation-submenu]'))) {
+    if (evt.target.closest('[data-navigation="item-with-submenu"]') && !(evt.target.closest('[data-navigation="submenu"]'))) {
       evt.preventDefault();
-      const subListElement = evt.target.closest('[data-navigation-item-with-submenu]');
+      const subListElement = evt.target.closest('[data-navigation="item-with-submenu"]');
       subListElement.classList.toggle('is-open');
     } else {
       closeMenu();
@@ -95,7 +93,7 @@ function onWindowKeydown(evt) {
 }
 
 function onWindowClick(evt) {
-  if (!(evt.target.classList.contains('[data-navigation-button])'))) {
+  if (!(evt.target.classList.contains('[data-navigation="button"])'))) {
     evt.preventDefault();
     closeMenu();
   }
@@ -144,7 +142,6 @@ function removeWindowListener() {
 const initMenu = () => {
   if (headerElement && navigationToggleElement && iconToggleElement) {
     if (headerElement.classList.contains('is-open')) {
-    // headerElement.classList.remove('header--nojs');
       headerElement.classList.remove('is-open');
       if (navigationToggleElement.classList.contains('is-active')) {
         navigationToggleElement.classList.remove('btn--blue-background', 'is-active');

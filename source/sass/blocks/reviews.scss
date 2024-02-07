@@ -42,15 +42,15 @@
 }
 
 .reviews__slider {
-    width: 1240px;
+  width: 1240px;
 
-    @include vp-1439 {
-      width: 723px;
-    }
+  @include vp-1439 {
+    width: 723px;
+  }
 
-    @include vp-767 {
-      position: static;
-      width: 290px;
+  @include vp-767 {
+    position: static;
+    width: 290px;
   }
 }
 
@@ -118,6 +118,8 @@
   height: 90px;
 
   border-radius: 90px;
+
+  background-color: $color-cerulean-blue-opacity20;
 
   @include vp-767 {
     width: 60px;
@@ -319,34 +321,34 @@
     display: none;
   }
 
-  & svg {
-    color: $color-cerulean-blue;
-
-    width: 11px;
-    height: 12px;
-  }
-
   &:focus,
   &:hover {
     background-color: $color-default-white;
   }
+}
 
-  &:active {
-    background-color: $color-default-white;
+.reviews__slider-button svg {
+  color: $color-cerulean-blue;
 
-    & svg {
-      color: $color-cerulean-blue-opacity70;
-    }
-  }
+  width: 11px;
+  height: 12px;
+}
 
-  &:disabled {
-    background-color: $color-transparent;
-    opacity: 1;
+.reviews__slider-button:active {
+  background-color: $color-default-white;
+}
 
-    & svg {
-      color: $color-mischka;
-    }
-  }
+.reviews__slider-button:active svg {
+  color: $color-cerulean-blue-opacity70;
+}
+
+.reviews__slider-button:disabled {
+  background-color: $color-transparent;
+  opacity: 1;
+}
+
+.reviews__slider-button:disabled svg {
+  color: $color-mischka;
 }
 
 .reviews__slider-button--next {

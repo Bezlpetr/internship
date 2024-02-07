@@ -1,4 +1,4 @@
-const headerElement = document.querySelector('[data-header-sticky]');
+const headerElement = document.querySelector('[data-header="sticky"]');
 
 const headerHidden = () => headerElement.classList.contains('is-hidden'); // узнаем скрыт header или нет
 let prevScroll = window.scrollY; // узнаем на сколько была прокручена страница ранее

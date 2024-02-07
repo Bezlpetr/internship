@@ -4,9 +4,10 @@
 
 .contacts__container {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-  "title address"
-  "map map";
+    "title address"
+    "map map";
   row-gap: 31px;
 
   padding-top: 120px;
@@ -134,9 +135,7 @@
 
   color: $color-default-white;
 
-  text-wrap: nowrap;
-
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;

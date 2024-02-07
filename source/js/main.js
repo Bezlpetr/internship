@@ -1,16 +1,7 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
-
-// import {iosVhFix} from './utils/ios-vh-fix';
 import './utils/focus-lock';
 import './utils/scroll-lock';
 import './utils/ios-checker';
 import {CustomSelect} from './modules/custom-select/custom-select';
-// import {Burger} from './vendor/header/burger';
-// import {StickyHeader} from './vendor/header/sticky-header';
-// import {initLocomotiveScroll} from './vendor/header/init-locomotive-scroll';
 
 import {initTabs} from './modules/tabs/init-tabs';
 import {initAccordions} from './modules/accordion/init-accordion';
@@ -32,8 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // iosVhFix();
 
-  // initLocomotiveScroll();
-
   initMenu();
   initHeaderSticky();
   // Modules
@@ -41,10 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    // const burger = new Burger();
-    // burger.init();
-    // const stickyHeader = new StickyHeader();
-    // stickyHeader.init();
     initHeroSlider();
     initProgramsSlider();
     initNewsSlider();

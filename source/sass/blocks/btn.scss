@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 3px 3px 3px 29px;
   width: 100%;
+  max-width: 350px;
 
   font-size: 14px;
   font-weight: 500;
@@ -18,27 +19,8 @@
   cursor: pointer;
 
   @include vp-767 {
+    max-width: 290px;
     padding: 3px 3px 3px 19px;
-  }
-
-  & .btn__circle {
-    display: flex;
-    width: 46px;
-    height: 46px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30px;
-
-    color: $color-default-white;
-
-    background-color: $color-cerulean-blue;
-    border-radius: 44px;
-
-    @include vp-767 {
-      width: 34px;
-      height: 34px;
-      margin-left: 20px;
-    }
   }
 
   &:disabled {
@@ -47,69 +29,86 @@
     background-color: $color-transparent;
     border: 1px solid $color-mischka;
     pointer-events: none;
-
-    & .btn__circle {
-      color: $color-default-white-opacity60;
-
-      background-color: $color-mischka;
-    }
   }
+}
 
-  &.btn--disabled {
-    color: $color-mischka;
+.btn__circle {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  flex-shrink: 0;
 
-    background-color: $color-transparent;
-    border: 1px solid $color-mischka;
-    pointer-events: none;
+  color: $color-default-white;
 
-    & .btn__circle {
-      color: $color-default-white-opacity60;
+  background-color: $color-cerulean-blue;
+  border-radius: 44px;
 
-      background-color: $color-mischka;
-    }
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
   }
+}
 
-  &:not(.btn--disabled) {
-    &:hover,
-    &:focus {
-      color: $color-default-white;
+.btn:disabled .btn__circle {
+  color: $color-default-white-opacity60;
 
-      background-color: $color-cerulean-blue;
-      border: 1px solid $color-cerulean-blue;
-      outline: none;
+  background-color: $color-mischka;
+}
 
-      & .btn__circle {
-        color: $color-cerulean-blue;
+.btn--disabled {
+  color: $color-mischka;
 
-        background-color: $color-default-white;
-      }
+  background-color: $color-transparent;
+  border: 1px solid $color-mischka;
+  pointer-events: none;
+}
 
-      & .btn__circle svg {
-        rotate: 45deg;
-      }
-    }
+.btn--disabled .btn__circle {
+  color: $color-default-white-opacity60;
 
-    &:active {
-      color: $color-default-white-opacity70;
+  background-color: $color-mischka;
+}
 
-      background-color: $color-cerulean-blue;
-      border: 1px solid $color-cerulean-blue;
+.btn:not(.btn--disabled):hover,
+.btn:not(.btn--disabled):focus {
+  color: $color-default-white;
 
-      & .btn__circle {
-        color: $color-cerulean-blue-opacity70;
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
+  outline: none;
+}
 
-        background-color: $color-default-white;
-      }
+.btn:not(.btn--disabled):hover .btn__circle,
+.btn:not(.btn--disabled):focus .btn__circle {
+  color: $color-cerulean-blue;
 
-      & .btn__circle svg {
-        rotate: 45deg;
-      }
-    }
-  }
+  background-color: $color-default-white;
+}
 
-  &:focus-visible {
-    outline: none;
-  }
+.btn:not(.btn--disabled):hover svg,
+.btn:not(.btn--disabled):focus svg {
+  rotate: 45deg;
+}
+
+.btn:not(.btn--disabled):active {
+  color: $color-default-white-opacity70;
+
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
+}
+
+.btn:not(.btn--disabled):active .btn__circle {
+  color: $color-cerulean-blue-opacity70;
+
+  background-color: $color-default-white;
+}
+
+.btn:not(.btn--disabled):active svg {
+  rotate: 45deg;
 }
 
 .btn svg {
@@ -131,84 +130,80 @@
   background-color: $color-cerulean-blue;
   border: 1px solid $color-default-white;
 
-  & .btn__circle {
-    color: $color-cerulean-blue;
-
-    background-color: $color-default-white;
-  }
-
   &:disabled {
     background-color: $color-cerulean-blue;
   }
+}
 
-  &:not(.btn--disabled) {
-    &:hover,
-    &:focus {
-      color: $color-cerulean-blue;
+.btn--blue-background .btn__circle {
+  color: $color-cerulean-blue;
 
-      background-color: $color-default-white;
-      border: 1px solid $color-default-white;
-      outline: none;
+  background-color: $color-default-white;
+}
 
-      & .btn__circle {
-        color: $color-default-white;
+.btn--blue-background:not(.btn--disabled):hover,
+.btn--blue-background:not(.btn--disabled):focus {
+  color: $color-cerulean-blue;
 
-        background-color: $color-cerulean-blue;
-      }
-    }
+  background-color: $color-default-white;
+  border: 1px solid $color-default-white;
+  outline: none;
+}
 
-    &:active {
-      color: $color-cerulean-blue-opacity70;
+.btn--blue-background:not(.btn--disabled):hover .btn__circle,
+.btn--blue-background:not(.btn--disabled):focus .btn__circle {
+  color: $color-default-white;
 
-      background-color: $color-default-white;
-      border: 1px solid $color-default-white;
+  background-color: $color-cerulean-blue;
+}
 
-      & .btn__circle {
-        color: $color-default-white-opacity70;
+.btn--blue-background:not(.btn--disabled):active {
+  color: $color-cerulean-blue-opacity70;
 
-        background-color: $color-cerulean-blue;
-      }
-    }
-  }
+  background-color: $color-default-white;
+  border: 1px solid $color-default-white;
+}
+
+.btn--blue-background:not(.btn--disabled):active .btn__circle {
+  color: $color-default-white-opacity70;
+
+  background-color: $color-cerulean-blue;
 }
 
 .btn--only-circle {
   padding: 0;
 
   border: none;
+}
 
-  & span:first-child {
-    display: none;
-  }
+.btn--only-circle span:first-child {
+  display: none;
+}
 
-  & .btn__circle {
-    width: 30px;
-    height: 30px;
-    margin: 0;
-  }
+.btn--only-circle .btn__circle {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
 
-  & .btn__circle svg {
-    width: 10px;
-    height: 10px;
+.btn--only-circle svg {
+  width: 10px;
+  height: 10px;
 
-    background-size: 10px 10px;
-  }
+  background-size: 10px 10px;
+}
 
-  &:not(.btn--disabled) {
-    &:hover,
-    &:focus {
-      background-color: $color-default-white;
-      border: none;
-    }
+.btn--only-circle:not(.btn--disabled):hover,
+.btn--only-circle:not(.btn--disabled):focus {
+  background-color: $color-default-white;
+  border: none;
+}
 
-    &:active {
-      color: $color-default-white;
-      border: none;
-    }
-  }
+.btn--only-circle:not(.btn--disabled):active {
+  color: $color-default-white;
+  border: none;
+}
 
-
-  &.btn--disabled {
-    border: none;
-  }
+.btn--only-circle.btn--disabled {
+  border: none;
 }

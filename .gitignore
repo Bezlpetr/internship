@@ -13,6 +13,8 @@ backstop_data
 .cache
 *.local
 package-lock.json
+temp
+1737917-internship.zip
 
 # Editor directories and files
 .vscode/*

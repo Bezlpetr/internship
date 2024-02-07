@@ -11,7 +11,7 @@ export class Tabs {
 
   _resizeObserver() {
     return new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         if (entry.target.classList.contains('is-active')) {
           this._updateTabHeight();
         }
@@ -82,7 +82,7 @@ export class Tabs {
   }
 
   _returnMaxHeight(tabElements) {
-    let height = [];
+    const height = [];
     tabElements.forEach((element) => {
       height.push(element.offsetHeight);
     });
@@ -149,7 +149,7 @@ export class Tabs {
 
   _createDOMElement(elementType, attributes) {
     const element = document.createElement(elementType);
-    for (let key in attributes) {
+    for (const key in attributes) {
       if (attributes.hasOwnProperty(key)) {
         element.setAttribute(key, attributes[key]);
       }
@@ -332,7 +332,7 @@ export class Tabs {
     if (currentHeight > newHeight) {
       setTimeout(() => {
         if (dataHeight !== 'max' && dataHeight !== 'unset') {
-          contentElement.style.height = newHeight + 'px';
+          contentElement.style.height = `${newHeight }px`;
         }
         control.classList.add('is-active');
         tabElements[currentIndex].classList.add('is-active');
@@ -340,7 +340,7 @@ export class Tabs {
       }, dataDelay);
     } else {
       if (dataHeight !== 'max' && dataHeight !== 'unset') {
-        contentElement.style.height = newHeight + 'px';
+        contentElement.style.height = `${newHeight }px`;
       }
       setTimeout(() => {
         control.classList.add('is-active');

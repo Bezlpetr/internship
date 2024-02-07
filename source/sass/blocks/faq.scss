@@ -70,7 +70,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: none;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
 
@@ -106,55 +105,52 @@
   }
 }
 
-//---Подгонка под макет
-.faq__accordion-element:nth-child(4) {
-  & .faq__accordion-button {
-    padding: 31px 39px 31px;
+// ---Подгонка под макет
+.faq__accordion-element:nth-child(4) .faq__accordion-button {
+  padding: 31px 39px;
 
-    @include vp-1439 {
-      padding: 24px 29px 24px;
-    }
-
-    @include vp-767 {
-      padding: 18px 14px;
-    }
+  @include vp-1439 {
+    padding: 24px 29px;
   }
 
-  & .faq__accordion-button-icon {
-    align-self: flex-start;
-    margin-top: 7px;
-
-    @include vp-1439 {
-      align-self: center;
-      margin-top: 0;
-    }
+  @include vp-767 {
+    padding: 18px 14px;
   }
 }
 
-.faq__accordion-element:nth-child(5) {
-  & .faq__accordion-button {
-    padding: 32px 39px 32px;
+.faq__accordion-element:nth-child(4) .faq__accordion-button-icon {
+  align-self: flex-start;
+  margin-top: 7px;
 
-    @include vp-1439 {
-      padding: 24px 29px 24px;
-    }
-
-    @include vp-767 {
-      padding: 20px 14px;
-    }
-  }
-
-  & .faq__accordion-button-icon {
-    align-self: flex-start;
-    margin-top: 7px;
-
-    @include vp-1439 {
-      align-self: center;
-      margin-top: 0;
-    }
+  @include vp-1439 {
+    align-self: center;
+    margin-top: 0;
   }
 }
-//---
+
+.faq__accordion-element:nth-child(5) .faq__accordion-button {
+  padding: 32px 39px;
+
+  @include vp-1439 {
+    padding: 24px 29px;
+  }
+
+  @include vp-767 {
+    padding: 20px 14px;
+  }
+}
+
+.faq__accordion-element:nth-child(5) .faq__accordion-button-icon {
+  align-self: flex-start;
+  margin-top: 7px;
+
+  @include vp-1439 {
+    align-self: center;
+    margin-top: 0;
+  }
+}
+
+// ---
 
 .faq__accordion-button span > br {
   display: inline;
@@ -174,7 +170,7 @@
   flex-shrink: 0;
   margin-left: 215px;
 
-  background-color:  $color-cerulean-blue;
+  background-color: $color-cerulean-blue;
   border: 1px solid $color-cerulean-blue;
   border-radius: 30px;
 
@@ -213,37 +209,38 @@
 .faq__accordion-button:hover {
   background-color: $color-default-white;
   cursor: pointer;
+}
 
-  & > .faq__accordion-button-icon {
-    background-color: $color-default-white;
+.faq__accordion-button:focus > .faq__accordion-button-icon,
+.faq__accordion-button:hover > .faq__accordion-button-icon {
+  background-color: $color-default-white;
 
-    &::before {
-      background-color: $color-cerulean-blue;
-    }
+  &::before {
+    background-color: $color-cerulean-blue;
+  }
 
-    &::after {
-      background-color: $color-cerulean-blue;
-    }
+  &::after {
+    background-color: $color-cerulean-blue;
   }
 }
 
 .faq__accordion-button:active {
   background-color: $color-default-white;
+}
 
-  & > span {
-    color: $color-endeavour;
+.faq__accordion-button:active > span {
+  color: $color-endeavour;
+}
+
+.faq__accordion-button:active > .faq__accordion-button-icon {
+  background-color: $color-endeavour;
+
+  &::before {
+    background-color: $color-default-white;
   }
 
-  & > .faq__accordion-button-icon {
-    background-color: $color-endeavour;
-
-    &::before {
-      background-color: $color-default-white;
-    }
-
-    &::after {
-      background-color: $color-default-white;
-    }
+  &::after {
+    background-color: $color-default-white;
   }
 }
 
@@ -269,7 +266,7 @@
 
   color: $color-alabaster;
 
-  @include vp-1439  {
+  @include vp-1439 {
     padding-left: 30px;
     padding-right: 69px;
     margin-bottom: 10px;
@@ -298,74 +295,73 @@
   }
 }
 
-.faq__accordion-element.is-active {
-  & > .faq__accordion-button {
-    padding: 39px 40px 15px;
+.faq__accordion-element.is-active > .faq__accordion-button {
+  padding: 39px 40px 15px;
 
-    background-color: $color-cerulean-blue;
-    border: none;
-    border-radius: 16px 16px 0 0;
+  background-color: $color-cerulean-blue;
+  border: none;
+  border-radius: 16px 16px 0 0;
 
-    @include vp-1439 {
-      padding: 30px 30px 17px;
-    }
-
-    @include vp-767 {
-      padding: 20px 15px 16px;
-
-      border-radius: 14px 14px 0 0;
-    }
-
-    & > span {
-      color: $color-default-white;
-    }
-
-    & > .faq__accordion-button-icon {
-      align-self: flex-start;
-
-      background-color: $color-default-white;
-
-      &::before {
-        background-color: $color-cerulean-blue;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
+  @include vp-1439 {
+    padding: 30px 30px 17px;
   }
 
-  & > .faq__accordion-button:focus,
-  & > .faq__accordion-button:hover {
+  @include vp-767 {
+    padding: 20px 15px 16px;
+
+    border-radius: 14px 14px 0 0;
+  }
+}
+
+.faq__accordion-element.is-active > .faq__accordion-button > span {
+  color: $color-default-white;
+}
+
+.faq__accordion-element.is-active > .faq__accordion-button > .faq__accordion-button-icon {
+  align-self: flex-start;
+
+  background-color: $color-default-white;
+
+  &::before {
     background-color: $color-cerulean-blue;
-    cursor: pointer;
-
-    & > .faq__accordion-button-icon {
-      background-color: $color-cerulean-blue;
-
-      border: 1px solid $color-default-white;
-
-      &::before {
-        background-color: $color-default-white;
-      }
-    }
   }
 
-  & > .faq__accordion-button:active {
+  &::after {
+    display: none;
+  }
+}
+
+.faq__accordion-element.is-active > .faq__accordion-button:focus,
+.faq__accordion-element.is-active > .faq__accordion-button:hover {
+  background-color: $color-cerulean-blue;
+  cursor: pointer;
+}
+
+.faq__accordion-element.is-active > .faq__accordion-button:focus > .faq__accordion-button-icon,
+.faq__accordion-element.is-active > .faq__accordion-button:hover > .faq__accordion-button-icon {
+  background-color: $color-cerulean-blue;
+
+  border: 1px solid $color-default-white;
+
+  &::before {
+    background-color: $color-default-white;
+  }
+}
+
+.faq__accordion-element.is-active > .faq__accordion-button:active {
+  background-color: $color-endeavour;
+}
+
+.faq__accordion-element.is-active > .faq__accordion-button:active > .faq__accordion-button-icon {
+  background-color: $color-default-white;
+
+  border: 1px solid $color-default-white;
+
+  &::before {
     background-color: $color-endeavour;
-
-    & > .faq__accordion-button-icon {
-      background-color: $color-default-white;
-
-      border: 1px solid $color-default-white;
-
-      &::before {
-        background-color: $color-endeavour;
-      }
-    }
-
-    & + .faq__accordion-content-wrapper {
-      background-color: $color-endeavour;
-    }
   }
+}
+
+.faq__accordion-element.is-active > .faq__accordion-button:active + .faq__accordion-content-wrapper {
+  background-color: $color-endeavour;
 }

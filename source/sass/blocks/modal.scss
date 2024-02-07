@@ -25,96 +25,91 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
 
-  &__wrapper {
-    transform: translateZ(0);
-    background-color: rgba(#000000, 0.6);
-    position: relative;
+.modal__wrapper {
+  transform: translateZ(0);
+  background-color: rgba(#000000, 0.6);
+  position: relative;
 
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    // padding: 60px 40px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
 
-    // @include vp-767 {
-    //   padding: 40px 15px;
-    // }
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+
+  width: 510px;
+  padding: 60px 40px;
+
+  background-color: #ffffff;
+  border-radius: 16px;
+
+  @include vp-767 {
+    width: 290px;
+    padding: 40px 15px;
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  padding: 0;
+
+  color: $color-cerulean-blue;
+
+  background: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-cerulean-blue-opacity70;
+    outline: none;
   }
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    cursor: pointer;
+  &:active {
+    color: $color-endeavour;
   }
+}
 
-  &__content {
-    position: relative;
+.modal__close-btn svg {
+  display: block;
+}
 
-    width: 510px;
-    padding: 60px 40px;
+.modal--preload {
+  transition: none;
+}
 
-    background-color: #ffffff;
-    border-radius: 16px;
+.modal.is-active {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
-    @include vp-767 {
-      width: 290px;
-      padding: 40px 15px;
-    }
-  }
+  pointer-events: auto;
+}
 
-  &__close-btn {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-
-    padding: 0;
-
-    color: $color-cerulean-blue;
-
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
-
-    svg {
-      display: block;
-    }
-
-    &:hover,
-    &:focus {
-      color: $color-cerulean-blue-opacity70;
-      outline: none;
-    }
-
-    &:active {
-      color: $color-endeavour;
-    }
-  }
-
-  &--preload {
-    transition: none;
-  }
-
-  &.is-active {
-    transform: scale(1);
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-    pointer-events: auto;
-  }
-
-  iframe {
-    max-width: 100%;
-    border: none;
-  }
+.modal iframe {
+  max-width: 100%;
+  border: none;
 }
 
 .modal__title-wrapper {
@@ -186,31 +181,24 @@
 
 .modal__checkbox-wrapper {
   position: relative;
+}
 
-  &.is-invalid {
-    label::before {
-      background-color: $color-wild-watermelon-opacity20;
-      border: 1px solid $color-wild-watermelon;
-    }
-  }
+.modal__checkbox-wrapper.is-invalid label::before {
+  background-color: $color-wild-watermelon-opacity20;
+  border: 1px solid $color-wild-watermelon;
+}
 
-  .input-message {
-    position: absolute;
-    bottom: -15px;
-    right: 0;
+.modal__checkbox-wrapper .input-message {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
 
-    font-size: 14px;
-    line-height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+}
 
-    &.is-invalid {
-      color: $color-wild-watermelon;
-    }
-
-    //Стили для подписи к input при правильном заполнении поля
-    // &.is-valid {
-    //   color: #15ab07;
-    // }
-  }
+.modal__checkbox-wrapper .input-message.is-invalid {
+  color: $color-wild-watermelon;
 }
 
 .modal .modal__checkbox-wrapper label {
@@ -276,54 +264,53 @@
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-
-  &:hover + label {
-    cursor: pointer;
-  }
-
-  &:hover + label::before,
-  &:focus + label::before {
-    border: 1px solid $color-cerulean-blue;
-    outline: none;
-  }
-
-  &:disabled + label {
-    cursor: default;
-  }
-
-  &:disabled + label::before {
-    background-color: $color-mischka;
-    border: 1px solid $color-cerulean-blue;
-  }
 }
 
-.modal__checkbox-wrapper input:checked {
-  & + label::before {
-    background-color: $color-cerulean-blue;
-  }
+.modal__checkbox-wrapper input:hover + label {
+  cursor: pointer;
+}
 
-  & + label::after {
-    display: block;
-  }
+.modal__checkbox-wrapper input:hover + label::before,
+.modal__checkbox-wrapper input:focus + label::before {
+  border: 1px solid $color-cerulean-blue;
+  outline: none;
+}
 
-  &:hover + label::before,
-  &:focus + label::before {
-    background-color: $color-default-white;
-  }
+.modal__checkbox-wrapper input:disabled + label {
+  cursor: default;
+}
 
-  &:hover + label::after,
-  &:focus + label::after {
-    background-color: $color-cerulean-blue;
-  }
+.modal__checkbox-wrapper input:disabled + label::before {
+  background-color: $color-mischka;
+  border: 1px solid $color-cerulean-blue;
+}
 
-  &:disabled + label::before {
-    background-color: $color-mischka;
-    border: 1px solid $color-cerulean-blue;
-  }
 
-  &:disabled + label::after {
-    background-color: $color-cerulean-blue;
-  }
+.modal__checkbox-wrapper input:checked + label::before {
+  background-color: $color-cerulean-blue;
+}
+
+.modal__checkbox-wrapper input:checked + label::after {
+  display: block;
+}
+
+.modal__checkbox-wrapper input:checked:hover + label::before,
+.modal__checkbox-wrapper input:checked:focus + label::before {
+  background-color: $color-default-white;
+}
+
+.modal__checkbox-wrapper input:checked:hover + label::after,
+.modal__checkbox-wrapper input:checked:focus + label::after {
+  background-color: $color-cerulean-blue;
+}
+
+.modal__checkbox-wrapper input:checked:disabled + label::before {
+  background-color: $color-mischka;
+  border: 1px solid $color-cerulean-blue;
+}
+
+.modal__checkbox-wrapper input:checked:disabled + label::after {
+  background-color: $color-cerulean-blue;
 }
 
 .modal__form-button {
